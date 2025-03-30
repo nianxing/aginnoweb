@@ -20,8 +20,9 @@ class I18n {
     // 加载翻译文件
     async loadTranslations() {
         try {
-            const zhResponse = await fetch('/js/translations/zh.json');
-            const enResponse = await fetch('/js/translations/en.json');
+            // 使用相对路径加载翻译文件
+            const zhResponse = await fetch('js/translations/zh.json');
+            const enResponse = await fetch('js/translations/en.json');
             translations.zh = await zhResponse.json();
             translations.en = await enResponse.json();
             this.translate();
@@ -33,6 +34,13 @@ class I18n {
     // 检测用户语言
     async detectLanguage() {
         try {
+            // 先尝试从localStorage读取语言设置
+            const savedLang = localStorage.getItem('preferred_language');
+            if (savedLang && savedLang in languages) {
+                this.setLanguage(savedLang);
+                return;
+            }
+            
             // 使用浏览器语言设置
             const browserLang = navigator.language.toLowerCase().split('-')[0];
             this.setLanguage(browserLang in languages ? browserLang : 'en');
