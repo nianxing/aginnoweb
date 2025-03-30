@@ -2,17 +2,33 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>智农官网</title>
+<title data-i18n="site_title">智农科技 - AI + 新能源驱动的智慧农业生态构建者</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="" />
-<meta name="author" content="http://webthemez.com" />
+<meta name="description" content="智农科技致力于通过AI和清洁能源技术推动传统农业向高效、低碳、可持续方向转型" />
+<meta name="author" content="智农科技" />
 <!-- css -->
 <link href="css/bootstrap.min.css" rel="stylesheet" />
 <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
 <link href="css/jcarousel.css" rel="stylesheet" />
 <link href="css/flexslider.css" rel="stylesheet" />
 <link href="css/style.css" rel="stylesheet" />
- 
+
+<!-- 添加语言选择器样式 -->
+<style>
+.language-selector-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 1000;
+}
+.language-selector {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: white;
+}
+</style>
+
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -21,6 +37,13 @@
 </head>
 <body>
 <div id="wrapper">
+    <!-- 语言选择器 -->
+    <div class="language-selector-container">
+        <select id="language-selector" class="language-selector" onchange="window.i18n.setLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="zh">中文</option>
+        </select>
+    </div>
 
 	<!-- start header -->
 		<header>
@@ -34,14 +57,14 @@
                     </button>
                   <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"/></a>
                 </div>
-                <div class="navbar-collapse collapse ">
+                <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li> 
-						<li class="active"><a href="about.html">About Us</a></li>
-						<li><a href="services.html">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html" data-i18n="nav_home">首页</a></li> 
+						<li class="active"><a href="about.html" data-i18n="nav_about">关于我们</a></li>
+						<li><a href="services.html" data-i18n="nav_services">解决方案</a></li>
+                        <li><a href="portfolio.html" data-i18n="nav_portfolio">成功案例</a></li>
+                        <li><a href="pricing.html" data-i18n="nav_pricing">产品服务</a></li>
+                        <li><a href="contact.html" data-i18n="nav_contact">联系我们</a></li>
                     </ul>
                 </div>
             </div>
@@ -51,7 +74,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-				<h2 class="pageTitle">关于我们</h2>
+				<h2 class="pageTitle" data-i18n="nav_about">关于我们</h2>
 			</div>
 		</div>
 	</div>
@@ -64,9 +87,9 @@
 						<div class="row"> 
 							<div class="col-md-12">
 								<div class="about-logo">
-									<h3>We are awesome <span class="color">TEAM</span></h3>
-									<p>Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas</p>
-                                    	<p>Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas</p>
+									<h3 data-i18n="about_title">智农科技 - <span class="color">引领智慧农业创新</span></h3>
+									<p data-i18n="about_desc_1">智农科技成立于2020年，是一家专注于智慧农业领域的高科技企业。我们致力于通过AI技术和清洁能源解决方案，推动传统农业向智能化、低碳化转型。公司拥有多项自主知识产权，已获得国家高新技术企业认证。</p>
+									<p data-i18n="about_desc_2">作为全球领先的智慧农业解决方案提供商，我们打造了"数据采集-智能决策-绿色执行"的全链条农业生态系统。通过多模态AI决策系统、清洁能源农机装备、全链条智能闭环和数字农服SaaS平台四大核心技术，帮助农业生产实现降本增效、绿色发展。</p>
 								</div>
 								<a href="#" class="btn btn-color">Read more</a>  
 							</div>
@@ -77,113 +100,104 @@
 						
 						<div class="row">
 							<div class="col-md-4">
-								<!-- Heading and para -->
 								<div class="block-heading-two">
-									<h3><span>为什么选择我们</span></h3>
+									<h3><span data-i18n="why_choose_us">为什么选择我们</span></h3>
 								</div>
-								<p>Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur. <br/><br/>Sed ut perspiciaatis iste natus error sit voluptatem probably haven't heard of them accusamus.</p>
+								<p data-i18n="why_choose_desc">智农科技是全球唯一实现全链条自主可控的技术创新企业。我们与行业领军企业深度合作，具有显著的成本优势和创新能力。通过持续的技术创新和产品迭代，我们帮助客户实现了显著的经济效益和社会价值。</p>
 							</div>
 							<div class="col-md-4">
 								<div class="block-heading-two">
-									<h3><span>解决方案</span></h3>
+									<h3><span data-i18n="our_solution">核心优势</span></h3>
 								</div>		
-								<!-- Accordion starts -->
 								<div class="panel-group" id="accordion-alt3">
-								 <!-- Panel. Use "panel-XXX" class for different colors. Replace "XXX" with color. -->
-								  <div class="panel">	
-									<!-- Panel heading -->
-									 <div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseOne-alt3">
-											<i class="fa fa-angle-right"></i> Accordion Heading Text Item # 1
-										  </a>
-										</h4>
-									 </div>
-									 <div id="collapseOne-alt3" class="panel-collapse collapse">
-										<!-- Panel body -->
-										<div class="panel-body">
-										  Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
+									<div class="panel">	
+										<div class="panel-heading">
+											<h4 class="panel-title">
+												<a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseOne-alt3">
+													<i class="fa fa-angle-right"></i> 多模态AI决策系统
+												</a>
+											</h4>
 										</div>
-									 </div>
-								  </div>
-								  <div class="panel">
-									 <div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseTwo-alt3">
-											<i class="fa fa-angle-right"></i> Accordion Heading Text Item # 2
-										  </a>
-										</h4>
-									 </div>
-									 <div id="collapseTwo-alt3" class="panel-collapse collapse">
-										<div class="panel-body">
-										  Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
+										<div id="collapseOne-alt3" class="panel-collapse collapse">
+											<div class="panel-body">
+												融合视觉、气象、土壤、作物生理四源数据，实现病虫害预警准确率95%，作物增产18%，化肥使用减少22%。
+											</div>
 										</div>
-									 </div>
-								  </div>
-								  <div class="panel">
-									 <div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseThree-alt3">
-											<i class="fa fa-angle-right"></i> Accordion Heading Text Item # 3
-										  </a>
-										</h4>
-									 </div>
-									 <div id="collapseThree-alt3" class="panel-collapse collapse">
-										<div class="panel-body">
-										  Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
+									</div>
+									<div class="panel">
+										<div class="panel-heading">
+											<h4 class="panel-title">
+												<a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseTwo-alt3">
+													<i class="fa fa-angle-right"></i> 清洁能源农机装备
+												</a>
+											</h4>
 										</div>
-									 </div>
-								  </div>
-								  <div class="panel">
-									 <div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseFour-alt3">
-											<i class="fa fa-angle-right"></i> Accordion Heading Text Item # 4
-										  </a>
-										</h4>
-									 </div>
-									 <div id="collapseFour-alt3" class="panel-collapse collapse">
-										<div class="panel-body">
-										  Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
+										<div id="collapseTwo-alt3" class="panel-collapse collapse">
+											<div class="panel-body">
+												氢燃料电池+超级电容混合动力系统，运维成本降低55%，碳排放减少80%，能量回收效率提升45%。
+											</div>
 										</div>
-									 </div>
-								  </div>
+									</div>
+									<div class="panel">
+										<div class="panel-heading">
+											<h4 class="panel-title">
+												<a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseThree-alt3">
+													<i class="fa fa-angle-right"></i> 全链条智能闭环
+												</a>
+											</h4>
+										</div>
+										<div id="collapseThree-alt3" class="panel-collapse collapse">
+											<div class="panel-body">
+												打通"数据采集-决策-执行-反馈"流程，作业效率提升30%，漏播率<0.3%，夜间作业率提升40%。
+											</div>
+										</div>
+									</div>
+									<div class="panel">
+										<div class="panel-heading">
+											<h4 class="panel-title">
+												<a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseFour-alt3">
+													<i class="fa fa-angle-right"></i> 数字农服SaaS平台
+												</a>
+											</h4>
+										</div>
+										<div id="collapseFour-alt3" class="panel-collapse collapse">
+											<div class="panel-body">
+												实时监控设备状态、作业进度、产量预测等数据，对接种子、化肥供应商，实现农资精准采购。
+											</div>
+										</div>
+									</div>
 								</div>
-								<!-- Accordion ends -->
-								
 							</div>
 							
 							<div class="col-md-4">
 								<div class="block-heading-two">
-									<h3><span>Our Expertise</span></h3>
+									<h3><span data-i18n="our_expertise">技术实力</span></h3>
 								</div>								
-								<h6>Web Development</h6>
+								<h6>AI算法研发</h6>
 								<div class="progress pb-sm">
-								  <!-- White color (progress-bar-white) -->
-								  <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-									 <span class="sr-only">40% Complete (success)</span>
-								  </div>
+									<div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%">
+										<span class="sr-only">95% 完成</span>
+									</div>
 								</div>
-								<h6>Designing</h6>
+								<h6>清洁能源技术</h6>
 								<div class="progress pb-sm">
-								  <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-									 <span class="sr-only">40% Complete (success)</span>
-								  </div>
+									<div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+										<span class="sr-only">90% 完成</span>
+									</div>
 								</div>
-								<h6>User Experience</h6>
+								<h6>智能控制系统</h6>
 								<div class="progress pb-sm">
-								  <div class="progress-bar progress-bar-lblue" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-									 <span class="sr-only">40% Complete (success)</span>
-								  </div>
+									<div class="progress-bar progress-bar-lblue" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+										<span class="sr-only">85% 完成</span>
+									</div>
 								</div>
-								<h6>Development</h6>
+								<h6>农业大数据</h6>
 								<div class="progress pb-sm">
-								  <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
-									 <span class="sr-only">40% Complete (success)</span>
-								  </div>
+									<div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%">
+										<span class="sr-only">95% 完成</span>
+									</div>
 								</div>
 							</div>
-							
 						</div>
 						
 						 						
@@ -193,52 +207,52 @@
 				
 						<!-- Heading -->
 						<div class="block-heading-six">
-							<h4 class="bg-color">Our Team</h4>
+							<h4 class="bg-color" data-i18n="our_team">核心团队</h4>
 						</div>
 						<br>
-						
-						<!-- Our team starts -->
 						
 						<div class="team-six">
 							<div class="row">
 								<div class="col-md-3 col-sm-6">
-									<!-- Team Member -->
 									<div class="team-member">
-										<!-- Image -->
 										<img class="img-responsive" src="img/team1.jpg" alt="">
-										<!-- Name -->
-										<h4>年兴</h4>
-										<span class="deg">Creative</span> 
+										<h4 data-i18n="team_member_1_name">年兴</h4>
+										<span class="deg" data-i18n="team_member_1_title">创始人 & CEO</span>
+										<p data-i18n="team_member_1_desc">原滴滴高精度地图SLAM算法负责人，原三一重工智能驾驶研究院负责人，香港大学工学硕士。DARPA机器人挑战赛世界前五。</p>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
-									<!-- Team Member -->
 									<div class="team-member">
-										<!-- Image -->
 										<img class="img-responsive" src="img/team2.jpg" alt="">
-										<!-- Name -->
-										<h4>Jennifer</h4>
-										<span class="deg">Programmer</span> 
+										<h4 data-i18n="team_member_2_name">郝宇飞</h4>
+										<span class="deg" data-i18n="team_member_2_title">技术合伙人 & CTO</span>
+										<p data-i18n="team_member_2_desc">清华大学双硕士，连续创业者，15年项目管理经验，多个智慧产业项目成功经验。</p>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
-									<!-- Team Member -->
 									<div class="team-member">
-										<!-- Image -->
 										<img class="img-responsive" src="img/team3.jpg" alt="">
-										<!-- Name -->
-										<h4>Christean</h4>
-										<span class="deg">CEO</span> 
+										<h4 data-i18n="team_member_3_name">张国雄</h4>
+										<span class="deg" data-i18n="team_member_3_title">商务合伙人</span>
+										<p data-i18n="team_member_3_desc">原北京联合丰天科技董事长，20年管理经验，深耕农业上下游资源。</p>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
-									<!-- Team Member -->
 									<div class="team-member">
-										<!-- Image -->
 										<img class="img-responsive" src="img/team4.jpg" alt="">
-										<!-- Name -->
-										<h4>Kerinele rase</h4>
-										<span class="deg">Manager</span> 
+										<h4 data-i18n="team_member_4_name">张爱成</h4>
+										<span class="deg" data-i18n="team_member_4_title">市场合伙人</span>
+										<p data-i18n="team_member_4_desc">原京东智慧农业运营副总裁，原大北农集团市场总监，农业互联网专家。</p>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3 col-sm-6">
+									<div class="team-member">
+										<img class="img-responsive" src="img/team5.jpg" alt="">
+										<h4 data-i18n="team_member_5_name">Thomas Plocher</h4>
+										<span class="deg" data-i18n="team_member_5_title">战略合伙人</span>
+										<p data-i18n="team_member_5_desc">原道依茨电气化总监，德国斯图加特大学博士，25年国际农机电气化经验。</p>
 									</div>
 								</div>
 							</div>
@@ -339,5 +353,15 @@
 <script src="js/jquery.flexslider.js"></script>
 <script src="js/animate.js"></script>
 <script src="js/custom.js"></script>
+<script src="js/owl-carousel/owl.carousel.js"></script>
+
+<!-- 添加i18n脚本 -->
+<script type="module" src="js/i18n.js"></script>
+<script>
+	// 确保DOM加载完成后初始化i18n
+	document.addEventListener('DOMContentLoaded', function() {
+		// i18n实例会在i18n.js中自动创建
+	});
+</script>
 </body>
 </html>

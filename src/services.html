@@ -2,16 +2,32 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Free Bootstrap Templates | webthemez</title>
+<title data-i18n="site_title">智农科技 - AI + 新能源驱动的智慧农业生态构建者</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="" />
-<meta name="author" content="http://webthemez.com" />
+<meta name="description" content="智农科技致力于通过AI和清洁能源技术推动传统农业向高效、低碳、可持续方向转型" />
+<meta name="author" content="智农科技" />
  
 <link href="css/bootstrap.min.css" rel="stylesheet" />
 <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
 <link href="css/jcarousel.css" rel="stylesheet" />
 <link href="css/flexslider.css" rel="stylesheet" />
 <link href="css/style.css" rel="stylesheet" />
+
+<!-- 添加语言选择器样式 -->
+<style>
+.language-selector-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 1000;
+}
+.language-selector {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: white;
+}
+</style>
  
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -21,9 +37,16 @@
 </head>
 <body>
 <div id="wrapper">
+    <!-- 语言选择器 -->
+    <div class="language-selector-container">
+        <select id="language-selector" class="language-selector" onchange="window.i18n.setLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="zh">中文</option>
+        </select>
+    </div>
 
 	<!-- start header -->
-		<header>
+	<header>
         <div class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
@@ -34,14 +57,14 @@
                     </button>
                     <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"/></a>
                 </div>
-                <div class="navbar-collapse collapse ">
+                <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li> 
-						<li><a href="about.html">About Us</a></li>
-						<li class="active"><a href="services.html">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html" data-i18n="nav_home">首页</a></li> 
+						<li><a href="about.html" data-i18n="nav_about">关于我们</a></li>
+						<li class="active"><a href="services.html" data-i18n="nav_services">解决方案</a></li>
+                        <li><a href="portfolio.html" data-i18n="nav_portfolio">成功案例</a></li>
+                        <li><a href="pricing.html" data-i18n="nav_pricing">产品服务</a></li>
+                        <li><a href="contact.html" data-i18n="nav_contact">联系我们</a></li>
                     </ul>
                 </div>
             </div>
@@ -51,114 +74,110 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-				<h2 class="pageTitle">Services</h2>
+				<h2 class="pageTitle" data-i18n="nav_services">解决方案</h2>
 			</div>
 		</div>
 	</div>
 	</section>
 	<section id="content">
 		<div class="container content">	
-<div class="row"> 
-							<div class="col-md-12">
-								<div class="about-logo">
-									<h3>Our Amazing Service!</h3>
-									<p>Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas</p>
-                                    	<p>Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas</p>
-								</div>
-								<a href="#" class="btn btn-color">Read more</a>  
-							</div>
-						</div>		
-        <!-- Service Blcoks -->
-        <div class="row service-v1 margin-bottom-40">
-            <div class="col-md-4 md-margin-bottom-40">
-               <img class="img-responsive" src="img/service1.jpg" alt="">   
-                <h2>Web Development</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus</p>        
-            </div>
-            <div class="col-md-4">
-                <img class="img-responsive" src="img/service2.jpg" alt="">            
-                <h2>Mobile Development</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus</p>        
-            </div>
-            <div class="col-md-4 md-margin-bottom-40">
-              <img class="img-responsive" src="img/service3.jpg" alt="">  
-                <h2>Responsive Design</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus</p>        
-            </div>
-        </div>
-        <!-- End Service Blcoks -->
+			<div class="row"> 
+				<div class="col-md-12">
+					<div class="about-logo">
+						<h3 data-i18n="services_title">智农科技解决方案</h3>
+						<p data-i18n="services_desc_1">智农科技通过AI技术和清洁能源解决方案，帮助农业企业实现智能化转型。我们的解决方案已在全国多个农业示范区成功落地，实现了显著的经济效益和社会价值。</p>
+						<p data-i18n="services_desc_2">我们提供从数据采集、智能决策到绿色执行的全链条解决方案，帮助客户提升生产效率，降低运营成本，实现可持续发展。</p>
+					</div>
+				</div>
+			</div>		
+			<!-- Service Blocks -->
+			<div class="row service-v1 margin-bottom-40">
+				<div class="col-md-4 md-margin-bottom-40">
+					<img class="img-responsive" src="img/solution1.jpg" alt="">   
+					<h2 data-i18n="solution_1_title">多模态AI决策系统</h2>
+					<p data-i18n="solution_1_desc">融合视觉、气象、土壤、作物生理四源数据，通过深度学习算法实现病虫害预警、产量预测、灌溉决策等功能。系统准确率达95%，帮助作物增产18%，化肥使用减少22%。</p>        
+				</div>
+				<div class="col-md-4">
+					<img class="img-responsive" src="img/solution2.jpg" alt="">            
+					<h2 data-i18n="solution_2_title">清洁能源农机装备</h2>
+					<p data-i18n="solution_2_desc">采用氢燃料电池+超级电容混合动力系统，实现农机设备的清洁能源驱动。相比传统设备，运维成本降低55%，碳排放减少80%，能量回收效率提升45%。</p>        
+				</div>
+				<div class="col-md-4 md-margin-bottom-40">
+					<img class="img-responsive" src="img/solution3.jpg" alt="">  
+					<h2 data-i18n="solution_3_title">数字农服SaaS平台</h2>
+					<p data-i18n="solution_3_desc">提供设备监控、作业管理、产量预测、农资采购等一站式数字化服务。平台已服务超过100万亩农田，帮助10万农户实现增收，带动农业产业升级。</p>        
+				</div>
+			</div>
+			<!-- End Service Blocks -->
 
-        <hr class="margin-bottom-50">
+			<hr class="margin-bottom-50">
 
-        <!-- Info Blcoks -->
-        <div class="row">
-            <div class="col-sm-4 info-blocks">
-                <i class="icon-info-blocks fa fa-bell-o"></i>
-                <div class="info-blocks-in">
-                    <h3>Awesome Design</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt</p>
-                </div>
-            </div>
-            <div class="col-sm-4 info-blocks">
-                <i class="icon-info-blocks fa fa-hdd-o"></i>
-                <div class="info-blocks-in">
-                    <h3>FontAwesome</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt</p>
-                </div>
-            </div>
-            <div class="col-sm-4 info-blocks">
-                <i class="icon-info-blocks fa fa-lightbulb-o"></i>
-                <div class="info-blocks-in">
-                    <h3>Bootstrap</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt</p>
-                </div>
-            </div>
-        </div>
-        <!-- End Info Blcoks -->
+			<!-- Info Blocks -->
+			<div class="row">
+				<div class="col-sm-4 info-blocks">
+					<i class="icon-info-blocks fa fa-microchip"></i>
+					<div class="info-blocks-in">
+						<h3 data-i18n="feature_1_title">AI算法引擎</h3>
+						<p data-i18n="feature_1_desc">自主研发的深度学习算法，支持多模态数据融合分析，实现智能决策和预测。</p>
+					</div>
+				</div>
+				<div class="col-sm-4 info-blocks">
+					<i class="icon-info-blocks fa fa-leaf"></i>
+					<div class="info-blocks-in">
+						<h3 data-i18n="feature_2_title">绿色能源系统</h3>
+						<p data-i18n="feature_2_desc">创新的混合动力解决方案，实现农机设备的清洁能源驱动，助力农业绿色发展。</p>
+					</div>
+				</div>
+				<div class="col-sm-4 info-blocks">
+					<i class="icon-info-blocks fa fa-cogs"></i>
+					<div class="info-blocks-in">
+						<h3 data-i18n="feature_3_title">智能控制中心</h3>
+						<p data-i18n="feature_3_desc">全自动化的智能控制系统，实现农机设备的精准作业和远程管理。</p>
+					</div>
+				</div>
+			</div>
+			<!-- End Info Blocks -->
 
-       
-        <!-- Info Blcoks -->
-        <div class="row">
-            <div class="col-sm-4 info-blocks">
-                <i class="icon-info-blocks fa fa-code"></i>
-                <div class="info-blocks-in">
-                    <h3>SEO Ready</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt</p>
-                </div>
-            </div>
-            <div class="col-sm-4 info-blocks">
-                <i class="icon-info-blocks fa fa-compress"></i>
-                <div class="info-blocks-in">
-                    <h3>Fully Responsive</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt</p>
-                </div>
-            </div>
-            <div class="col-sm-4 info-blocks">
-                <i class="icon-info-blocks fa fa-html5"></i>
-                <div class="info-blocks-in">
-                    <h3>CSS3 + HTML5</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt</p>
-                </div>
-            </div>
-        </div>
-        <!-- End Info Blcoks -->
-
-        
-    </div>
-    </section>
+			<!-- Info Blocks -->
+			<div class="row">
+				<div class="col-sm-4 info-blocks">
+					<i class="icon-info-blocks fa fa-cloud"></i>
+					<div class="info-blocks-in">
+						<h3 data-i18n="feature_4_title">云平台支持</h3>
+						<p data-i18n="feature_4_desc">基于云计算的SaaS服务平台，提供灵活、可扩展的数字化解决方案。</p>
+					</div>
+				</div>
+				<div class="col-sm-4 info-blocks">
+					<i class="icon-info-blocks fa fa-shield"></i>
+					<div class="info-blocks-in">
+						<h3 data-i18n="feature_5_title">数据安全保障</h3>
+						<p data-i18n="feature_5_desc">采用多重加密和访问控制机制，确保农业数据的安全性和隐私保护。</p>
+					</div>
+				</div>
+				<div class="col-sm-4 info-blocks">
+					<i class="icon-info-blocks fa fa-line-chart"></i>
+					<div class="info-blocks-in">
+						<h3 data-i18n="feature_6_title">效益分析系统</h3>
+						<p data-i18n="feature_6_desc">全方位的数据分析和可视化工具，帮助客户实时掌握生产效益。</p>
+					</div>
+				</div>
+			</div>
+			<!-- End Info Blocks -->
+		</div>
+	</section>
 	<footer>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-3">
 				<div class="widget">
-					<h5 class="widgetheading">Our Contact</h5>
+					<h5 class="widgetheading" data-i18n="contact_title">联系我们</h5>
 					<address>
-					<strong>Target company Inc</strong><br>
-					JC Main Road, Near Silnile tower<br>
-					 Pin-21542 NewYork US.</address>
+						<strong>智农科技</strong><br>
+						江苏省常州市武进区<br>
+						中国常州科教城</address>
 					<p>
-						<i class="icon-phone"></i> (123) 456-789 - 1255-12584 <br>
-						<i class="icon-envelope-alt"></i> email@domainname.com
+						<i class="icon-phone"></i> (0519) 8888-8888<br>
+						<i class="icon-envelope-alt"></i> contact@zhinongtech.com
 					</p>
 				</div>
 			</div>
