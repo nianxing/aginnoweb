@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title data-i18n="site_title">Company Website</title>
+<title data-i18n="site_title">AgInno - Smart Agriculture</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="" />
-<meta name="author" content="" />
+<meta name="description" content="AgInno - Leading smart agriculture innovation with advanced technology solutions" />
+<meta name="author" content="AgInno" />
 <!-- css -->
 <link href="css/bootstrap.min.css" rel="stylesheet" />
 <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
@@ -13,6 +13,7 @@
 <link href="css/flexslider.css" rel="stylesheet" />
 <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -24,7 +25,7 @@
 <div id="wrapper">
 	<!-- 语言选择器 -->
 	<div class="language-selector-container">
-		<select id="language-selector" class="language-selector" onchange="window.i18n.setLanguage(this.value)">
+		<select id="language-selector" class="language-selector" onchange="if(window.i18n) window.i18n.setLanguage(this.value)">
 			<option value="en">English</option>
 			<option value="zh">中文</option>
 		</select>
@@ -57,464 +58,336 @@
 		</div>
 	</header>
 	<!-- end header -->
+	
+	<!-- Main Slider Section -->
 	<section id="featured">
-	 
-	<!-- Slider -->
-	<div id="main-slider" class="flexslider">
-		<ul class="slides">
-			<li>
-				<img src="img/slides/1.jpg" alt="" />
-				<div class="flex-caption">
-					<h3 data-i18n="slider_title_1">智能农机</h3> 
-					<p data-i18n="slider_desc_1">Doloribus omnis minus temporibus perferendis ipsa architecto non, magni quam</p>  
-				</div>
-			</li>
-			<li>
-				<img src="img/slides/2.jpg" alt="" />
-				<div class="flex-caption">
-					<h3 data-i18n="slider_title_2">Fully Responsive</h3> 
-					<p data-i18n="slider_desc_2">Lorem ipsum dolor sit amet, consectetur adipisicing elitincidunt eius magni provident.</p> 
-				</div>
-			</li>
-			<li>
-				<img src="img/slides/3.jpg" alt="" />
-				<div class="flex-caption">
-					<h3 data-i18n="slider_title_3">Multi-purpose Theme</h3> 
-					<p data-i18n="slider_desc_3">Lorem ipsum dolor sit amet, consectetur adipiscing elit donec mer lacinia.</p>  
-				</div>
-			</li>
-		</ul>
-	</div>
-	<!-- end slider -->
- 
+		<div id="main-slider" class="flexslider">
+			<ul class="slides">
+				<li>
+					<img src="img/slides/1.jpg" alt="智能农业" />
+					<div class="flex-caption">
+						<h3 data-i18n="slider_title_1">全球领先的智慧农业解决方案</h3> 
+						<p data-i18n="slider_desc_1">通过AI、物联网与清洁能源技术，打造"数据采集-智能决策-绿色执行"全链条农业生态系统</p>  
+					</div>
+				</li>
+				<li>
+					<img src="img/slides/2.jpg" alt="AI决策系统" />
+					<div class="flex-caption">
+						<h3 data-i18n="slider_title_2">多模态AI决策系统</h3> 
+						<p data-i18n="slider_desc_2">融合视觉、气象、土壤、作物生理四源数据，实现病虫害预警准确率95%</p> 
+					</div>
+				</li>
+				<li>
+					<img src="img/slides/3.jpg" alt="清洁能源农机" />
+					<div class="flex-caption">
+						<h3 data-i18n="slider_title_3">清洁能源农机装备</h3> 
+						<p data-i18n="slider_desc_3">氢燃料电池+超级电容混合动力系统，运维成本降低55%</p>  
+					</div>
+				</li>
+			</ul>
+		</div>
 	</section>
+	<!-- End Slider Section -->
+	
+	<!-- Welcome Section -->
 	<div class="content_white">
-		<div class="row">
-			<div class="col-md-12 text-center">
-				<h2>
-					<span data-i18n="welcome_title">Welcome to AgInno - The Future of Smart Agriculture is Here！</span>
-				</h2>
-				<p data-i18n="welcome_desc">AgInno is committed to transforming traditional agriculture through innovative technology, creating efficient, low-carbon, and sustainable solutions. We provide comprehensive smart agriculture services from technical training to integrated farm management systems.</p>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h2>
+						<span data-i18n="welcome_title">欢迎来到AgInno - 智慧农业的未来已来</span>
+					</h2>
+					<p data-i18n="welcome_desc">AgInno致力于通过创新科技推动传统农业向高效、低碳、可持续方向转型，打造全球领先的智慧农业解决方案。我们提供从技术培训到农场管理系统的全方位智慧农业服务。</p>
+				</div>
 			</div>
 		</div>
 	</div>
+	<!-- End Welcome Section -->
+	
+	<!-- Features Section -->
 	<div class="featured_content">
 		<div class="container">
 			<div class="row text-center">
 				<div class="col-md-3 feature_grid1">
 					<i class="fa fa-microchip fa-3x"></i>
-					<h3><a href="#" data-i18n="feature_title_1">Multi-modal AI</a></h3>
-					<p data-i18n="feature_desc_1">95% accuracy in pest warning with four-source data fusion</p>
-					<a href="#" class="feature_btn" data-i18n="learn_more">Learn More</a>
+					<h3><a href="#" data-i18n="feature_title_1">多模态AI决策</a></h3>
+					<p data-i18n="feature_desc_1">融合四源数据，病虫害预警准确率95%</p>
+					<a href="#" class="feature_btn" data-i18n="learn_more">了解更多</a>
 				</div>
 				<div class="col-md-3 feature_grid1">
 					<i class="fa fa-leaf fa-3x"></i>
-					<h3><a href="#" data-i18n="feature_title_2">Clean Energy</a></h3>
-					<p data-i18n="feature_desc_2">45% improvement in energy recovery efficiency</p>
-					<a href="#" class="feature_btn" data-i18n="learn_more">Learn More</a>
+					<h3><a href="#" data-i18n="feature_title_2">清洁能源农机</a></h3>
+					<p data-i18n="feature_desc_2">混合动力系统，能量回收效率提升45%</p>
+					<a href="#" class="feature_btn" data-i18n="learn_more">了解更多</a>
 				</div>
 				<div class="col-md-3 feature_grid1">
 					<i class="fa fa-cogs fa-3x"></i>
-					<h3><a href="#" data-i18n="feature_title_3">Full Chain Intelligence</a></h3>
-					<p data-i18n="feature_desc_3">30% efficiency increase, <0.3% missing rate</p>
-					<a href="#" class="feature_btn" data-i18n="learn_more">Learn More</a>
+					<h3><a href="#" data-i18n="feature_title_3">全链条智能</a></h3>
+					<p data-i18n="feature_desc_3">作业效率提升30%，漏播率低于0.3%</p>
+					<a href="#" class="feature_btn" data-i18n="learn_more">了解更多</a>
 				</div>
 				<div class="col-md-3 feature_grid1">
 					<i class="fa fa-dashboard fa-3x"></i>
-					<h3><a href="#" data-i18n="feature_title_4">Digital Management</a></h3>
-					<p data-i18n="feature_desc_4">Real-time monitoring and intelligent decision system</p>
-					<a href="#" class="feature_btn" data-i18n="learn_more">Learn More</a>
+					<h3><a href="#" data-i18n="feature_title_4">数字化管理</a></h3>
+					<p data-i18n="feature_desc_4">实时监控与智能决策系统</p>
+					<a href="#" class="feature_btn" data-i18n="learn_more">了解更多</a>
 				</div>
 			</div>
 		</div>
 	</div>
+	<!-- End Features Section -->
  
+	<!-- Business Sectors Section -->
 	<section id="content">
-	
-	<div class="container">
-		<!-- 业务板块标题 -->
-		<div class="row">
-			<div class="col-md-12">
-				<div class="section-title text-center">
-					<h2 data-i18n="business_section_title">我们的业务板块</h2>
-					<p data-i18n="business_section_subtitle">提供从智能设备、技术培训到解决方案的全方位智慧农业服务</p>
-				</div>
-			</div>
-		</div>
-		
-		<!-- 农业无人机培训 -->
-		<div class="row">
-			<div class="col-md-12 md-margin-bottom-40 featured-service">
-				<div class="card">
-					<div class="row">
-						<div class="col-md-6">
-							<img class="img-responsive" src="img/drone-training.jpg" alt="农业无人机培训">
-						</div>
-						<div class="col-md-6">
-							<div class="featured-content">
-								<h2 data-i18n="drone_training_title">农业无人机培训中心</h2>
-								<p data-i18n="drone_training_desc">与中国农业大学无人机系统研究院深度合作，打造专业的农业无人机培训基地。我们提供从基础操作到高级应用的全方位培训课程，帮助农民掌握智慧农业新技能。</p>
-								<div class="row stats">
-									<div class="col-md-4">
-										<div class="stat-item">
-											<h3 data-i18n="drone_training_stats_1">3000+</h3>
-											<p data-i18n="drone_training_stats_1_desc">已培训学员</p>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="stat-item">
-											<h3 data-i18n="drone_training_stats_2">98%</h3>
-											<p data-i18n="drone_training_stats_2_desc">就业率</p>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="stat-item">
-											<h3 data-i18n="drone_training_stats_3">50+</h3>
-											<p data-i18n="drone_training_stats_3_desc">合作企业</p>
-										</div>
-									</div>
-								</div>
-								<a href="drone-training.html" class="btn btn-primary" data-i18n="drone_training_cta">立即报名</a>
-							</div>
-						</div>
+		<div class="container">
+			<!-- 业务板块标题 -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="section-title text-center">
+						<h2 data-i18n="business_section_title">我们的业务板块</h2>
+						<p data-i18n="business_section_subtitle">提供从智能设备、技术培训到解决方案的全方位智慧农业服务</p>
 					</div>
 				</div>
-			</div>
-		</div>
-		
-		<!-- 智能农机 -->
-		<div class="row">
-			<div class="col-md-12 md-margin-bottom-40 featured-service">
-				<div class="card">
-					<div class="row">
-						<div class="col-md-6">
-							<div class="featured-content">
-								<h2 data-i18n="smart_machinery_title">智能农机</h2>
-								<p data-i18n="smart_machinery_desc">创新的混合动力解决方案，实现农机设备的清洁能源驱动，助力农业绿色发展。我们的智能农机装备采用氢燃料电池+超级电容混合动力系统，大幅降低碳排放，提高能量利用效率。</p>
-								<div class="row stats">
-									<div class="col-md-4">
-										<div class="stat-item">
-											<h3 data-i18n="smart_machinery_stats_1">55%</h3>
-											<p data-i18n="smart_machinery_stats_1_desc">成本降低</p>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="stat-item">
-											<h3 data-i18n="smart_machinery_stats_2">80%</h3>
-											<p data-i18n="smart_machinery_stats_2_desc">碳排放减少</p>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="stat-item">
-											<h3 data-i18n="smart_machinery_stats_3">45%</h3>
-											<p data-i18n="smart_machinery_stats_3_desc">能效提升</p>
-										</div>
-									</div>
-								</div>
-								<a href="smart-machinery.html" class="btn btn-primary" data-i18n="smart_machinery_cta">了解更多</a>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<img class="img-responsive" src="img/smart-machinery.jpg" alt="智能农机">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<!-- 智慧农场 -->
-		<div class="row">
-			<div class="col-md-12 md-margin-bottom-40 featured-service">
-				<div class="card">
-					<div class="row">
-						<div class="col-md-6">
-							<img class="img-responsive" src="img/smart-farm.jpg" alt="智慧农场">
-						</div>
-						<div class="col-md-6">
-							<div class="featured-content">
-								<h2 data-i18n="smart_farm_title">智慧农场</h2>
-								<p data-i18n="smart_farm_desc">融合物联网、人工智能和自动化设备，为现代农场提供全方位数字化解决方案。实时监测作物生长状态，通过AI分析提供精准决策，实现农业生产的高效管理。</p>
-								<div class="row stats">
-									<div class="col-md-4">
-										<div class="stat-item">
-											<h3 data-i18n="smart_farm_stats_1">30%</h3>
-											<p data-i18n="smart_farm_stats_1_desc">用水减少</p>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="stat-item">
-											<h3 data-i18n="smart_farm_stats_2">22%</h3>
-											<p data-i18n="smart_farm_stats_2_desc">化肥减少</p>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="stat-item">
-											<h3 data-i18n="smart_farm_stats_3">18%</h3>
-											<p data-i18n="smart_farm_stats_3_desc">产量提升</p>
-										</div>
-									</div>
-								</div>
-								<a href="smart-farm.html" class="btn btn-primary" data-i18n="smart_farm_cta">了解更多</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<!-- 智慧农服 -->
-		<div class="row">
-			<div class="col-md-12 md-margin-bottom-40 featured-service">
-				<div class="card">
-					<div class="row">
-						<div class="col-md-6">
-							<div class="featured-content">
-								<h2 data-i18n="smart_service_title">智慧农服</h2>
-								<p data-i18n="smart_service_desc">智慧农服平台整合农业生产所需的各类资源和服务，实现农业生产要素的精准匹配和高效协同，帮助农户降低生产成本，提高生产效率，促进农业产业链的现代化发展。</p>
-								<div class="row stats">
-									<div class="col-md-4">
-										<div class="stat-item">
-											<h3 data-i18n="smart_service_stats_1">20%</h3>
-											<p data-i18n="smart_service_stats_1_desc">成本降低</p>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="stat-item">
-											<h3 data-i18n="smart_service_stats_2">35%</h3>
-											<p data-i18n="smart_service_stats_2_desc">效率提升</p>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="stat-item">
-											<h3 data-i18n="smart_service_stats_3">12%</h3>
-											<p data-i18n="smart_service_stats_3_desc">收入增加</p>
-										</div>
-									</div>
-								</div>
-								<a href="smart-service.html" class="btn btn-primary" data-i18n="smart_service_cta">了解更多</a>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<img class="img-responsive" src="img/smart-service.jpg" alt="智慧农服">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="row">
-			<div class="col-md-8">
-				<!-- Heading and para -->
-				<div class="block-heading-two">
-					<h3><span data-i18n="why_choose_us">Why Choose Us?</span></h3>
-				</div>
-				<p data-i18n="why_choose_desc">Global pioneer in full-chain autonomous control, deep cooperation with industry leaders, significant cost advantages and innovation capabilities.</p>
-				<div class="row">
-					<div class="col-md-6">
-						<div class="block-heading-two">
-							<h4><span data-i18n="solution_1">Technical Innovation</span></h4>
-						</div>
-						<p data-i18n="solution_1_desc">World's first trinity technology system, achieving full-chain intelligent closed loop</p>
-					</div>
-					<div class="col-md-6">
-						<div class="block-heading-two">
-							<h4><span data-i18n="solution_2">Cost Advantage</span></h4>
-						</div>
-						<p data-i18n="solution_2_desc">40% lower cost than international competitors, 30% annual marginal cost reduction</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6">
-						<div class="block-heading-two">
-							<h4><span data-i18n="solution_3">Ecosystem Synergy</span></h4>
-						</div>
-						<p data-i18n="solution_3_desc">Partnerships with industry leaders, securing 30% of smart agricultural machinery market</p>
-					</div>
-					<div class="col-md-6">
-						<div class="block-heading-two">
-							<h4><span data-i18n="solution_4">Social Value</span></h4>
-						</div>
-						<p data-i18n="solution_4_desc">200,000 tons CO2 reduction annually, helping 100,000 farmers increase income</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="block-heading-two">
-					<h3><span data-i18n="our_solution">Core Advantages</span></h3>
-				</div>		
-				<!-- Accordion starts -->
-				<div class="panel-group" id="accordion-alt3">
-				 <!-- Panel. Use "panel-XXX" class for different colors. Replace "XXX" with color. -->
-				  <div class="panel">	
-					<!-- Panel heading -->
-					 <div class="panel-heading">
-						<h4 class="panel-title">
-						  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseOne-alt3">
-							<i class="fa fa-angle-right"></i> 多模态AI决策系统
-						  </a>
-						</h4>
-					 </div>
-					 <div id="collapseOne-alt3" class="panel-collapse collapse">
-						<!-- Panel body -->
-						<div class="panel-body">
-						  融合视觉、气象、土壤、作物生理四源数据，实现病虫害预警准确率95%，作物增产18%，化肥使用减少22%。
-						</div>
-					 </div>
-				  </div>
-				  <div class="panel">
-					 <div class="panel-heading">
-						<h4 class="panel-title">
-						  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseTwo-alt3">
-							<i class="fa fa-angle-right"></i> 清洁能源农机装备
-						  </a>
-						</h4>
-					 </div>
-					 <div id="collapseTwo-alt3" class="panel-collapse collapse">
-						<div class="panel-body">
-						  氢燃料电池+超级电容混合动力系统，运维成本降低55%，碳排放减少80%，能量回收效率提升45%。
-						</div>
-					 </div>
-				  </div>
-				  <div class="panel">
-					 <div class="panel-heading">
-						<h4 class="panel-title">
-						  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseThree-alt3">
-							<i class="fa fa-angle-right"></i> 全链条智能闭环
-						  </a>
-						</h4>
-					 </div>
-					 <div id="collapseThree-alt3" class="panel-collapse collapse">
-						<div class="panel-body">
-						  打通"数据采集-决策-执行-反馈"流程，作业效率提升30%，漏播率<0.3%，夜间作业率提升40%。
-						</div>
-					 </div>
-				  </div>
-				  <div class="panel">
-					 <div class="panel-heading">
-						<h4 class="panel-title">
-						  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseFour-alt3">
-							<i class="fa fa-angle-right"></i> 数字农服SaaS平台
-						  </a>
-						</h4>
-					 </div>
-					 <div id="collapseFour-alt3" class="panel-collapse collapse">
-						<div class="panel-body">
-						  实时监控设备状态、作业进度、产量预测等数据，对接种子、化肥供应商，实现农资精准采购。
-						</div>
-					 </div>
-				  </div>
-				</div>
-				<!-- Accordion ends -->
-				
 			</div>
 			
-	
+			<!-- 农业无人机培训 -->
+			<div class="row">
+				<div class="col-md-12 md-margin-bottom-40 featured-service">
+					<div class="card">
+						<div class="row">
+							<div class="col-md-6">
+								<img class="img-responsive" src="img/drone-training.jpg" alt="农业无人机培训">
+							</div>
+							<div class="col-md-6">
+								<div class="featured-content">
+									<h2 data-i18n="drone_training_title">农业无人机培训中心</h2>
+									<p data-i18n="drone_training_desc">与中国农业大学无人机系统研究院深度合作，打造专业的农业无人机培训基地。我们提供从基础操作到高级应用的全方位培训课程，帮助农民掌握智慧农业新技能。</p>
+									<div class="row stats">
+										<div class="col-md-4">
+											<div class="stat-item">
+												<h3 data-i18n="drone_training_stats_1">3000+</h3>
+												<p data-i18n="drone_training_stats_1_desc">已培训学员</p>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="stat-item">
+												<h3 data-i18n="drone_training_stats_2">98%</h3>
+												<p data-i18n="drone_training_stats_2_desc">就业率</p>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="stat-item">
+												<h3 data-i18n="drone_training_stats_3">50+</h3>
+												<p data-i18n="drone_training_stats_3_desc">合作企业</p>
+											</div>
+										</div>
+									</div>
+									<a href="drone-training.html" class="btn btn-primary" data-i18n="drone_training_cta">立即报名</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 			
+			<!-- 智能农机 -->
+			<div class="row">
+				<div class="col-md-12 md-margin-bottom-40 featured-service">
+					<div class="card">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="featured-content">
+									<h2 data-i18n="smart_machinery_title">智能农机</h2>
+									<p data-i18n="smart_machinery_desc">创新的混合动力解决方案，实现农机设备的清洁能源驱动，助力农业绿色发展。我们的智能农机装备采用氢燃料电池+超级电容混合动力系统，大幅降低碳排放，提高能量利用效率。</p>
+									<div class="row stats">
+										<div class="col-md-4">
+											<div class="stat-item">
+												<h3 data-i18n="smart_machinery_stats_1">55%</h3>
+												<p data-i18n="smart_machinery_stats_1_desc">成本降低</p>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="stat-item">
+												<h3 data-i18n="smart_machinery_stats_2">80%</h3>
+												<p data-i18n="smart_machinery_stats_2_desc">碳排放减少</p>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="stat-item">
+												<h3 data-i18n="smart_machinery_stats_3">45%</h3>
+												<p data-i18n="smart_machinery_stats_3_desc">能效提升</p>
+											</div>
+										</div>
+									</div>
+									<a href="smart-machinery.html" class="btn btn-primary" data-i18n="smart_machinery_cta">了解更多</a>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<img class="img-responsive" src="img/smart-machinery.jpg" alt="智能农机">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 智慧农场 -->
+			<div class="row">
+				<div class="col-md-12 md-margin-bottom-40 featured-service">
+					<div class="card">
+						<div class="row">
+							<div class="col-md-6">
+								<img class="img-responsive" src="img/smart-farm.jpg" alt="智慧农场">
+							</div>
+							<div class="col-md-6">
+								<div class="featured-content">
+									<h2 data-i18n="smart_farm_title">智慧农场</h2>
+									<p data-i18n="smart_farm_desc">融合物联网、人工智能和自动化设备，为现代农场提供全方位数字化解决方案。实时监测作物生长状态，通过AI分析提供精准决策，实现农业生产的高效管理。</p>
+									<div class="row stats">
+										<div class="col-md-4">
+											<div class="stat-item">
+												<h3 data-i18n="smart_farm_stats_1">30%</h3>
+												<p data-i18n="smart_farm_stats_1_desc">用水减少</p>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="stat-item">
+												<h3 data-i18n="smart_farm_stats_2">22%</h3>
+												<p data-i18n="smart_farm_stats_2_desc">化肥减少</p>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="stat-item">
+												<h3 data-i18n="smart_farm_stats_3">18%</h3>
+												<p data-i18n="smart_farm_stats_3_desc">产量提升</p>
+											</div>
+										</div>
+									</div>
+									<a href="smart-farm.html" class="btn btn-primary" data-i18n="smart_farm_cta">了解更多</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 智慧农服 -->
+			<div class="row">
+				<div class="col-md-12 md-margin-bottom-40 featured-service">
+					<div class="card">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="featured-content">
+									<h2 data-i18n="smart_service_title">智慧农服</h2>
+									<p data-i18n="smart_service_desc">智慧农服平台整合农业生产所需的各类资源和服务，实现农业生产要素的精准匹配和高效协同，帮助农户降低生产成本，提高生产效率，促进农业产业链的现代化发展。</p>
+									<div class="row stats">
+										<div class="col-md-4">
+											<div class="stat-item">
+												<h3 data-i18n="smart_service_stats_1">20%</h3>
+												<p data-i18n="smart_service_stats_1_desc">成本降低</p>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="stat-item">
+												<h3 data-i18n="smart_service_stats_2">35%</h3>
+												<p data-i18n="smart_service_stats_2_desc">效率提升</p>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="stat-item">
+												<h3 data-i18n="smart_service_stats_3">12%</h3>
+												<p data-i18n="smart_service_stats_3_desc">收入增加</p>
+											</div>
+										</div>
+									</div>
+									<a href="smart-service.html" class="btn btn-primary" data-i18n="smart_service_cta">了解更多</a>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<img class="img-responsive" src="img/smart-service.jpg" alt="智慧农服">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-
-
-	</div>
-	
 	</section>
-	<div class="testimonial-area">
-		<div class="testimonial-solid">
-			<div class="container"> 
-				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-					<ol class="carousel-indicators">
-						<li data-target="#carousel-example-generic" data-slide-to="0" class="">
-							<a href="#"></a>
-						</li>
-						<li data-target="#carousel-example-generic" data-slide-to="1" class="">
-							<a href="#"></a>
-						</li>
-						<li data-target="#carousel-example-generic" data-slide-to="2" class="active">
-							<a href="#"></a>
-						</li>
-						<li data-target="#carousel-example-generic" data-slide-to="3" class="">
-							<a href="#"></a>
-						</li>
-					</ol>
-					<div class="carousel-inner">
-						<div class="item">
-							<p>Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.</p>
-							<p>
-								<b>- Mark John -</b>
-							</p>
-						</div>
-						<div class="item">
-							<p>Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.</p>
-							<p>
-								<b>- Jaison Warner -</b>
-							</p>
-						</div>
-						<div class="item active">
-							<p>Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.</p>
-							<p>
-								<b>- Tony Antonio -</b>
-							</p>
-						</div>
-						<div class="item">
-							<p>Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.</p>
-							<p>
-								<b>- Leena Doe -</b>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	<!-- End Business Sectors Section -->
+
+	<!-- Footer -->
 	<footer>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-3">
-				<div class="widget">
-					<h5 class="widgetheading" data-i18n="contact_title">Contact Us</h5>
-					<address>
-						<strong>智农科技</strong><br>
-						江苏省常州市武进区<br>
-						中国常州科教城</address>
-					<p>
-						<i class="icon-phone"></i> (0519) 8888-8888<br>
-						<i class="icon-envelope-alt"></i> contact@zhinongtech.com
-					</p>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="widget">
-					<h5 class="widgetheading">快速链接</h5>
-					<ul class="link-list">
-						<li><a href="#">最新动态</a></li>
-						<li><a href="#">服务条款</a></li>
-						<li><a href="#">隐私政策</a></li>
-						<li><a href="#">加入我们</a></li>
-						<li><a href="#">联系我们</a></li>
-					</ul>
-				</div>
-			</div>
-	</div>
-	<div id="sub-footer">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6">
-					<div class="copyright">
+				<div class="col-lg-3">
+					<div class="widget">
+						<h5 class="widgetheading" data-i18n="contact_title">联系我们</h5>
+						<address>
+							<strong>AgInno科技</strong><br>
+							江苏省常州市武进区<br>
+							中国常州科教城</address>
 						<p>
-							<span data-i18n="footer_copyright">版权所有 © 2025 智农未来</span>
+							<i class="fa fa-phone"></i> (0519) 8888-8888<br>
+							<i class="fa fa-envelope"></i> contact@aginno.com
 						</p>
 					</div>
 				</div>
-				<div class="col-lg-6">
-					<ul class="social-network">
-						<li><a href="#" data-placement="top" title="WeChat"><i class="fa fa-weixin"></i></a></li>
-						<li><a href="#" data-placement="top" title="Weibo"><i class="fa fa-weibo"></i></a></li>
-						<li><a href="#" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
-						<li><a href="#" data-placement="top" title="Bilibili"><i class="fa fa-play-circle"></i></a></li>
-					</ul>
+				<div class="col-lg-3">
+					<div class="widget">
+						<h5 class="widgetheading">快速链接</h5>
+						<ul class="link-list">
+							<li><a href="#">最新动态</a></li>
+							<li><a href="#">服务条款</a></li>
+							<li><a href="#">隐私政策</a></li>
+							<li><a href="#">加入我们</a></li>
+							<li><a href="#">联系我们</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="widget">
+						<h5 class="widgetheading">成功案例</h5>
+						<ul class="link-list">
+							<li><a href="#">山东智慧农业示范区：作业成本降低25%</a></li>
+							<li><a href="#">内蒙古智能农场项目：夜间作业率提升40%</a></li>
+							<li><a href="#">江苏绿色农业基地：化肥使用减少22%</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="widget">
+						<h5 class="widgetheading">关注我们</h5>
+						<ul class="social-network">
+							<li><a href="#" data-placement="top" title="WeChat"><i class="fa fa-weixin fa-2x"></i></a></li>
+							<li><a href="#" data-placement="top" title="Weibo"><i class="fa fa-weibo fa-2x"></i></a></li>
+							<li><a href="https://www.linkedin.com/company/86170881" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin fa-2x"></i></a></li>
+							<li><a href="#" data-placement="top" title="Bilibili"><i class="fa fa-play-circle fa-2x"></i></a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+		<div id="sub-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="copyright">
+							<p>
+								<span data-i18n="footer_copyright">版权所有 © 2024 AgInno</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<ul class="social-network">
+							<li><a href="#" data-placement="top" title="WeChat"><i class="fa fa-weixin"></i></a></li>
+							<li><a href="#" data-placement="top" title="Weibo"><i class="fa fa-weibo"></i></a></li>
+							<li><a href="https://www.linkedin.com/company/86170881" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+							<li><a href="#" data-placement="top" title="Bilibili"><i class="fa fa-play-circle"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 	</footer>
+	<!-- End Footer -->
 </div>
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
 <!-- javascript
@@ -532,12 +405,19 @@
 <script src="js/custom.js"></script>
 <script src="js/owl-carousel/owl.carousel.js"></script>
 
-<!-- 在底部添加i18n脚本 -->
-<script type="module" src="js/i18n.js"></script>
+<!-- i18n脚本 -->
+<script src="js/i18n.js"></script>
 <script>
 	// 确保DOM加载完成后初始化i18n
 	document.addEventListener('DOMContentLoaded', function() {
-		// i18n实例会在i18n.js中自动创建
+		// 确保i18n被正确初始化
+		if (window.i18n) {
+			console.log("i18n initialized successfully");
+			// 手动执行一次翻译，确保所有元素都被翻译
+			window.i18n.translate();
+		} else {
+			console.error("i18n failed to initialize");
+		}
 	});
 </script>
 </body>

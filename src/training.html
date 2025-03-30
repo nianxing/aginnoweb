@@ -16,7 +16,7 @@
 <!-- 语言选择器样式 -->
 <style>
 .language-selector-container {
-    position: absolute;
+    position: fixed;
     top: 10px;
     right: 20px;
     z-index: 1000;
@@ -414,5 +414,18 @@
 <script src="js/animate.js"></script>
 <script src="js/custom.js"></script>
 <script src="js/i18n.js"></script>
+<script>
+    // 确保DOM加载完成后初始化i18n
+    document.addEventListener('DOMContentLoaded', function() {
+        // 确保i18n被正确初始化
+        if (window.i18n) {
+            console.log("i18n initialized successfully in training.html");
+            // 手动执行一次翻译，确保所有元素都被翻译
+            window.i18n.translate();
+        } else {
+            console.error("i18n failed to initialize in training.html");
+        }
+    });
+</script>
 </body>
 </html> 

@@ -14,10 +14,9 @@
 <link href="css/style.css" rel="stylesheet" />
 
 <!-- 语言选择器样式 -->
-<!--
 <style>
 .language-selector-container {
-    position: absolute;
+    position: fixed;
     top: 10px;
     right: 20px;
     z-index: 1000;
@@ -29,7 +28,6 @@
     background-color: white;
 }
 </style>
--->
 </head>
 <body>
 <div id="wrapper">
@@ -444,11 +442,18 @@
 <script src="js/owl-carousel/owl.carousel.js"></script>
 
 <!-- 添加i18n脚本 -->
-<script type="module" src="js/i18n.js"></script>
+<script src="js/i18n.js"></script>
 <script>
     // 确保DOM加载完成后初始化i18n
     document.addEventListener('DOMContentLoaded', function() {
-        // i18n实例会在i18n.js中自动创建
+        // 确保i18n被正确初始化
+        if (window.i18n) {
+            console.log("i18n initialized successfully in drone-training.html");
+            // 手动执行一次翻译，确保所有元素都被翻译
+            window.i18n.translate();
+        } else {
+            console.error("i18n failed to initialize in drone-training.html");
+        }
     });
 </script>
 </body>

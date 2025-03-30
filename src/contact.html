@@ -18,9 +18,32 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+<!-- 语言选择器样式 -->
+<style>
+.language-selector-container {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 1000;
+}
+.language-selector {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: white;
+}
+</style>
 </head>
 <body>
 <div id="wrapper">
+	<!-- 语言选择器 -->
+	<div class="language-selector-container">
+		<select id="language-selector" class="language-selector" onchange="window.i18n.setLanguage(this.value)">
+			<option value="en">English</option>
+			<option value="zh">中文</option>
+		</select>
+	</div>
+	
 	<!-- start header -->
 	<header>
         <div class="navbar navbar-default navbar-static-top">
@@ -199,5 +222,21 @@
 <script src="js/animate.js"></script>
 <script src="js/custom.js"></script>
 <script src="js/validate.js"></script>
+
+<!-- i18n脚本 -->
+<script src="js/i18n.js"></script>
+<script>
+    // 确保DOM加载完成后初始化i18n
+    document.addEventListener('DOMContentLoaded', function() {
+        // 确保i18n被正确初始化
+        if (window.i18n) {
+            console.log("i18n initialized successfully in contact.html");
+            // 手动执行一次翻译，确保所有元素都被翻译
+            window.i18n.translate();
+        } else {
+            console.error("i18n failed to initialize in contact.html");
+        }
+    });
+</script>
 </body>
 </html>

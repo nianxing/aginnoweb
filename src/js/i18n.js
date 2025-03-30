@@ -15,6 +15,27 @@ class I18n {
         this.currentLang = 'en';
         this.loadTranslations();
         this.detectLanguage();
+        this.initializeLanguageSelector();
+    }
+
+    // 初始化语言选择器
+    initializeLanguageSelector() {
+        document.addEventListener('DOMContentLoaded', () => {
+            const languageSelector = document.getElementById('language-selector');
+            if (languageSelector) {
+                languageSelector.value = this.currentLang;
+                
+                // 直接给语言选择器添加事件监听
+                languageSelector.addEventListener('change', (event) => {
+                    console.log('Language change event triggered:', event.target.value);
+                    this.setLanguage(event.target.value);
+                });
+                
+                console.log('Language selector initialized with language:', this.currentLang);
+            } else {
+                console.error('Language selector element not found');
+            }
+        });
     }
 
     // 加载翻译文件
@@ -23,8 +44,14 @@ class I18n {
             // 使用相对路径加载翻译文件
             const zhResponse = await fetch('js/translations/zh.json');
             const enResponse = await fetch('js/translations/en.json');
+            
+            if (!zhResponse.ok || !enResponse.ok) {
+                throw new Error('Failed to fetch translation files');
+            }
+            
             translations.zh = await zhResponse.json();
             translations.en = await enResponse.json();
+            console.log('Translations loaded successfully');
             this.translate();
         } catch (error) {
             console.error('Error loading translations:', error);
@@ -58,6 +85,7 @@ class I18n {
             localStorage.setItem('preferred_language', lang);
             this.translate();
             this.updateLanguageSelector();
+            console.log('Language switched to:', lang);
         }
     }
 
@@ -88,5 +116,7 @@ class I18n {
 // 创建全局实例
 window.i18n = new I18n();
 
-// 导出实例供其他模块使用
-export default window.i18n; 
+// 为了确保即使在非模块环境中也能工作
+if (typeof exports !== 'undefined') {
+    exports.i18n = window.i18n;
+} 
