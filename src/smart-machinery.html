@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title data-i18n="site_title">智农科技 - 智能农机</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="智农科技的智能农机解决方案，创新的混合动力系统，助力农业绿色发展" />
+<meta name="author" content="智农" />
+ 
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
+<link href="css/jcarousel.css" rel="stylesheet" />
+<link href="css/flexslider.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" />
+
+<!-- 语言选择器样式 -->
+<style>
+.language-selector-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 1000;
+}
+.language-selector {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: white;
+}
+</style>
+</head>
+<body>
+<div id="wrapper">
+    <!-- 语言选择器 -->
+    <div class="language-selector-container">
+        <select id="language-selector" class="language-selector" onchange="window.i18n.setLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="zh">中文</option>
+        </select>
+    </div>
+
+    <!-- 导航栏 -->
+    <header>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"/></a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html" data-i18n="nav_home">首页</a></li>
+                        <li><a href="drone-training.html" data-i18n="nav_drone_training">农业无人机培训</a></li>
+                        <li class="active"><a href="smart-machinery.html" data-i18n="nav_smart_machinery">智能农机</a></li>
+                        <li><a href="smart-farm.html" data-i18n="nav_smart_farm">智慧农场</a></li>
+                        <li><a href="smart-service.html" data-i18n="nav_smart_service">智慧农服</a></li>
+                        <li><a href="about.html" data-i18n="nav_about">关于我们</a></li>
+                        <li><a href="contact.html" data-i18n="nav_contact">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 页面标题 -->
+    <section id="inner-headline">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="pageTitle" data-i18n="business_smart_machinery_title">智能农机</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主要内容 -->
+    <section id="content">
+        <div class="container">
+            <!-- 介绍 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="about-logo">
+                        <h3>智能农机装备 - <span class="color">引领农业机械化新时代</span></h3>
+                        <p data-i18n="business_smart_machinery_desc">创新的混合动力解决方案，实现农机设备的清洁能源驱动，助力农业绿色发展。我们的智能农机装备采用氢燃料电池+超级电容混合动力系统，相比传统设备，运维成本降低55%，碳排放减少80%，能量回收效率提升45%。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 核心技术 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h3>核心技术</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row service-v1 margin-bottom-40">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="img-responsive" src="img/smart-machinery/tech1.jpg" alt="氢燃料电池技术">
+                        </div>
+                        <div class="card-content">
+                            <h3>氢燃料电池技术</h3>
+                            <p>自主研发的高能效氢燃料电池系统，功率密度比市场同类产品提高30%，寿命延长40%，适应农业环境的温度和湿度变化。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="img-responsive" src="img/smart-machinery/tech2.jpg" alt="超级电容技术">
+                        </div>
+                        <div class="card-content">
+                            <h3>超级电容技术</h3>
+                            <p>特制的超级电容系统，可以高效回收制动能量，支持快速充放电，适应农机设备频繁启停的作业特点，能量回收效率达到45%。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="img-responsive" src="img/smart-machinery/tech3.jpg" alt="智能控制系统">
+                        </div>
+                        <div class="card-content">
+                            <h3>智能控制系统</h3>
+                            <p>AI驱动的能源管理系统，根据不同工况自动调整能源分配策略，最大化能源利用效率，提供精准的能源数据分析。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 产品展示 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h3>产品系列</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="img/smart-machinery/product1.jpg" alt="清洁智能拖拉机" class="img-responsive">
+                        </div>
+                        <div class="product-details">
+                            <h3>ZN-T100清洁智能拖拉机</h3>
+                            <ul class="feature-list">
+                                <li>功率: 100千瓦</li>
+                                <li>作业时间: 连续10小时</li>
+                                <li>最大牵引力: 35千牛</li>
+                                <li>自主导航精度: ±2.5厘米</li>
+                                <li>适用场景: 耕地、播种、收获</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">了解详情</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="img/smart-machinery/product2.jpg" alt="智能联合收割机" class="img-responsive">
+                        </div>
+                        <div class="product-details">
+                            <h3>ZN-H200智能联合收割机</h3>
+                            <ul class="feature-list">
+                                <li>功率: 200千瓦</li>
+                                <li>作业时间: 连续8小时</li>
+                                <li>收获效率: 每小时2公顷</li>
+                                <li>损失率: 低于1%</li>
+                                <li>适用作物: 水稻、小麦、玉米</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">了解详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="img/smart-machinery/product3.jpg" alt="智能植保机" class="img-responsive">
+                        </div>
+                        <div class="product-details">
+                            <h3>ZN-P50智能植保机</h3>
+                            <ul class="feature-list">
+                                <li>功率: 50千瓦</li>
+                                <li>作业时间: 连续12小时</li>
+                                <li>药箱容量: 600升</li>
+                                <li>喷洒精度: 95%以上</li>
+                                <li>智能识别: 作物、杂草、病害自动识别</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">了解详情</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="img/smart-machinery/product4.jpg" alt="智能运输车" class="img-responsive">
+                        </div>
+                        <div class="product-details">
+                            <h3>ZN-C80智能运输车</h3>
+                            <ul class="feature-list">
+                                <li>功率: 80千瓦</li>
+                                <li>作业时间: 连续15小时</li>
+                                <li>载重: 5吨</li>
+                                <li>最高速度: 40公里/小时</li>
+                                <li>特点: 可自动跟随收割机路线</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">了解详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 成功案例 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h3>成功案例</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="case-study">
+                        <img src="img/smart-machinery/case1.jpg" alt="黑龙江农场案例" class="img-responsive">
+                        <div class="case-content">
+                            <h3>黑龙江现代农场智能改造</h3>
+                            <p>为黑龙江某2万亩现代农场提供ZN-T100清洁智能拖拉机和ZN-H200智能联合收割机，实现全程机械化作业。项目成果：</p>
+                            <ul>
+                                <li>燃油成本降低65%</li>
+                                <li>人工成本降低40%</li>
+                                <li>作业效率提升35%</li>
+                                <li>碳排放减少75%</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="case-study">
+                        <img src="img/smart-machinery/case2.jpg" alt="江苏合作社案例" class="img-responsive">
+                        <div class="case-content">
+                            <h3>江苏合作社农机换能项目</h3>
+                            <p>为江苏某农机合作社提供15台ZN-P50智能植保机和10台ZN-C80智能运输车，覆盖服务周边5000亩农田。项目成果：</p>
+                            <ul>
+                                <li>运营成本降低55%</li>
+                                <li>药剂使用减少30%</li>
+                                <li>植保效率提升50%</li>
+                                <li>病虫害防治成功率提升25%</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 技术优势 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h3>技术优势</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="advantage-box">
+                        <div class="icon">
+                            <i class="fa fa-leaf fa-3x"></i>
+                        </div>
+                        <h4>绿色低碳</h4>
+                        <p>零排放运行，减少80%碳排放，符合国家"双碳"战略要求</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="advantage-box">
+                        <div class="icon">
+                            <i class="fa fa-money fa-3x"></i>
+                        </div>
+                        <h4>经济高效</h4>
+                        <p>能源成本降低55%，维护成本降低40%，全生命周期成本优势明显</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="advantage-box">
+                        <div class="icon">
+                            <i class="fa fa-cogs fa-3x"></i>
+                        </div>
+                        <h4>智能可控</h4>
+                        <p>AI智能控制系统，支持自动驾驶、远程监控和智能作业</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="advantage-box">
+                        <div class="icon">
+                            <i class="fa fa-wrench fa-3x"></i>
+                        </div>
+                        <h4>易于维护</h4>
+                        <p>模块化设计，故障自诊断，零部件标准化，大幅降低维护难度</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 服务支持 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h3>服务支持</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="service-box">
+                        <h4>售前咨询</h4>
+                        <p>我们提供专业的农机解决方案咨询，根据您的具体需求和农场条件，定制最适合的农机配置方案。</p>
+                        <h4>培训服务</h4>
+                        <p>提供全面的操作和维护培训，包括线下实操培训和线上视频课程，确保您能够充分发挥设备性能。</p>
+                        <h4>金融支持</h4>
+                        <p>与多家金融机构合作，提供灵活的购买、租赁和融资方案，解决资金压力。</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-box">
+                        <h4>售后保障</h4>
+                        <p>提供3年整机保修，关键部件5年保修，全国300+服务网点，24小时响应服务。</p>
+                        <h4>远程诊断</h4>
+                        <p>设备支持远程诊断和故障预警，通过智能手机APP随时查看设备状态和性能数据。</p>
+                        <h4>升级服务</h4>
+                        <p>定期提供软件升级和硬件优化服务，持续提升设备性能和使用体验。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA -->
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="cta-box">
+                        <h3>立即体验智能农机的革命性变革</h3>
+                        <p>联系我们，获取专业产品咨询和演示预约</p>
+                        <a href="contact.html" class="btn btn-primary">联系我们</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="widget">
+                        <h5 class="widgetheading" data-i18n="contact_title">联系我们</h5>
+                        <address>
+                            <strong>智农科技</strong><br>
+                            江苏省常州市武进区<br>
+                            中国常州科教城</address>
+                        <p>
+                            <i class="icon-phone"></i> (0519) 8888-8888<br>
+                            <i class="icon-envelope-alt"></i> contact@zhinongtech.com
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="widget">
+                        <h5 class="widgetheading">快速链接</h5>
+                        <ul class="link-list">
+                            <li><a href="#">最新动态</a></li>
+                            <li><a href="#">服务条款</a></li>
+                            <li><a href="#">隐私政策</a></li>
+                            <li><a href="#">加入我们</a></li>
+                            <li><a href="#">联系我们</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="widget">
+                        <h5 class="widgetheading">解决方案</h5>
+                        <ul class="link-list">
+                            <li><a href="#">多模态AI决策系统</a></li>
+                            <li><a href="#">清洁能源农机装备</a></li>
+                            <li><a href="#">全链条智能闭环</a></li>
+                            <li><a href="#">数字农服SaaS平台</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="widget">
+                        <h5 class="widgetheading">成功案例</h5>
+                        <ul class="link-list">
+                            <li><a href="#">山东智慧农业示范区：作业成本降低25%</a></li>
+                            <li><a href="#">内蒙古智能农场项目：夜间作业率提升40%</a></li>
+                            <li><a href="#">江苏绿色农业基地：化肥使用减少22%</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sub-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="copyright">
+                            <p>
+                                <span data-i18n="footer_copyright">版权所有 © 2024 智农科技</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul class="social-network">
+                            <li><a href="#" data-placement="top" title="WeChat"><i class="fa fa-weixin"></i></a></li>
+                            <li><a href="#" data-placement="top" title="Weibo"><i class="fa fa-weibo"></i></a></li>
+                            <li><a href="#" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#" data-placement="top" title="Bilibili"><i class="fa fa-play-circle"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.fancybox-media.js"></script> 
+<script src="js/portfolio/jquery.quicksand.js"></script>
+<script src="js/portfolio/setting.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/owl-carousel/owl.carousel.js"></script>
+
+<!-- 添加i18n脚本 -->
+<script type="module" src="js/i18n.js"></script>
+<script>
+    // 确保DOM加载完成后初始化i18n
+    document.addEventListener('DOMContentLoaded', function() {
+        // i18n实例会在i18n.js中自动创建
+    });
+</script>
+</body>
+</html> 

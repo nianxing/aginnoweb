@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title data-i18n="site_title">智农科技 - 智慧农服</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="智农科技的智慧农服平台，整合各类农业生产服务资源，实现农业生产要素的精准匹配和高效协同" />
+<meta name="author" content="智农" />
+ 
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
+<link href="css/jcarousel.css" rel="stylesheet" />
+<link href="css/flexslider.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" />
+
+<!-- 语言选择器样式 -->
+<style>
+.language-selector-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 1000;
+}
+.language-selector {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: white;
+}
+</style>
+</head>
+<body>
+<div id="wrapper">
+    <!-- 语言选择器 -->
+    <div class="language-selector-container">
+        <select id="language-selector" class="language-selector" onchange="window.i18n.setLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="zh">中文</option>
+        </select>
+    </div>
+
+    <!-- 导航栏 -->
+    <header>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"/></a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html" data-i18n="nav_home">首页</a></li>
+                        <li><a href="drone-training.html" data-i18n="nav_drone_training">农业无人机培训</a></li>
+                        <li><a href="smart-machinery.html" data-i18n="nav_smart_machinery">智能农机</a></li>
+                        <li><a href="smart-farm.html" data-i18n="nav_smart_farm">智慧农场</a></li>
+                        <li class="active"><a href="smart-service.html" data-i18n="nav_smart_service">智慧农服</a></li>
+                        <li><a href="about.html" data-i18n="nav_about">关于我们</a></li>
+                        <li><a href="contact.html" data-i18n="nav_contact">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 页面标题 -->
+    <section id="inner-headline">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="pageTitle" data-i18n="business_smart_service_title">智慧农服</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主要内容 -->
+    <section id="content">
+        <div class="container">
+            <!-- 介绍 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="about-logo">
+                        <h3>智慧农服 - <span class="color">整合资源·高效服务</span></h3>
+                        <p data-i18n="business_smart_service_desc">智慧农服平台是智农科技推出的农业全程服务解决方案，通过数字化平台整合农业生产所需的各类资源和服务，实现农业生产要素的精准匹配和高效协同，帮助农户、合作社和农场降低生产成本，提高生产效率，促进农业产业链的现代化发展。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 平台架构 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h3>平台架构</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="platform-architecture">
+                        <img src="img/smart-service/platform.jpg" alt="智慧农服平台架构" class="img-responsive">
+                        <div class="architecture-description">
+                            <p>智慧农服平台采用"云+端"架构设计，以云端服务中心为核心，通过移动应用、Web门户和物联网设备实现多端接入。平台聚合各类农业生产服务资源，包括农资供应、农机作业、技术指导、金融服务等，并通过智能算法实现精准推荐和智能调度。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 主要功能 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h3>主要功能</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row service-v1 margin-bottom-40">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="img-responsive" src="img/smart-service/function1.jpg" alt="农资供应">
+                        </div>
+                        <div class="card-content">
+                            <h3>农资供应服务</h3>
+                            <p>整合优质农资供应商资源，提供种子、化肥、农药等农资在线采购服务，实现优质农资直供，降低农资成本，保障农资质量。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="img-responsive" src="img/smart-service/function2.jpg" alt="农机服务">
+                        </div>
+                        <div class="card-content">
+                            <h3>农机作业服务</h3>
+                            <p>建立农机共享平台，整合各类农机资源，提供耕整地、播种、植保、收获等全程机械化作业服务，农户可在线预约，实现精准作业。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="img-responsive" src="img/smart-service/function3.jpg" alt="技术服务">
+                        </div>
+                        <div class="card-content">
+                            <h3>农技指导服务</h3>
+                            <p>汇聚农业专家资源，提供线上咨询、远程诊断、现场指导等专业技术服务，帮助解决生产中的技术难题，提升科学种植水平。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row service-v1 margin-bottom-40">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="img-responsive" src="img/smart-service/function4.jpg" alt="金融服务">
+                        </div>
+                        <div class="card-content">
+                            <h3>农业金融服务</h3>
+                            <p>联合金融机构，基于生产数据和信用记录，为农户和农场提供贷款、保险、支付等定制化金融服务，解决农业生产资金需求。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="img-responsive" src="img/smart-service/function5.jpg" alt="市场营销">
+                        </div>
+                        <div class="card-content">
+                            <h3>农产品营销服务</h3>
+                            <p>提供农产品溯源、品牌打造、线上销售等全方位营销服务，打通产销渠道，帮助农产品提质增效，实现优质优价。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="img-responsive" src="img/smart-service/function6.jpg" alt="数据分析">
+                        </div>
+                        <div class="card-content">
+                            <h3>农业数据分析</h3>
+                            <p>基于大数据分析技术，对农业生产、营销、气象等数据进行深度挖掘，提供市场趋势、生产决策、风险预警等信息服务。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 应用场景 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h3>应用场景</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="scenario-card">
+                        <div class="scenario-image">
+                            <img src="img/smart-service/scenario1.jpg" alt="小农户服务" class="img-responsive">
+                        </div>
+                        <div class="scenario-details">
+                            <h3>小农户生产服务</h3>
+                            <p>针对小规模农户提供"一站式"农业生产服务，解决其在技术、装备、资金等方面的短板，降低生产成本，提高农产品质量。</p>
+                            <ul class="feature-list">
+                                <li>农资团购：降低采购成本20%以上</li>
+                                <li>农机共享：降低机械化作业成本30%</li>
+                                <li>技术指导：提高种植成功率25%</li>
+                                <li>产品销售：提高农产品售价15%</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="scenario-card">
+                        <div class="scenario-image">
+                            <img src="img/smart-service/scenario2.jpg" alt="合作社服务" class="img-responsive">
+                        </div>
+                        <div class="scenario-details">
+                            <h3>农民合作社服务</h3>
+                            <p>为农民合作社提供农业生产全程托管服务和组织管理服务，提升合作社的组织化水平和市场竞争力。</p>
+                            <ul class="feature-list">
+                                <li>统一采购：规模化采购，降低成本</li>
+                                <li>标准化生产：提高产品质量和一致性</li>
+                                <li>集中销售：增强市场议价能力</li>
+                                <li>品牌建设：打造区域优质品牌</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="scenario-card">
+                        <div class="scenario-image">
+                            <img src="img/smart-service/scenario3.jpg" alt="家庭农场服务" class="img-responsive">
+                        </div>
+                        <div class="scenario-details">
+                            <h3>家庭农场服务</h3>
+                            <p>面向家庭农场提供专业化、精准化的生产管理服务和营销支持，帮助其降本增效，提升经营管理水平。</p>
+                            <ul class="feature-list">
+                                <li>精准农业方案：提高资源利用效率</li>
+                                <li>专家顾问服务：解决技术难题</li>
+                                <li>农产品溯源：增加产品附加值</li>
+                                <li>品牌营销：拓展高端销售渠道</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="scenario-card">
+                        <div class="scenario-image">
+                            <img src="img/smart-service/scenario4.jpg" alt="农业企业服务" class="img-responsive">
+                        </div>
+                        <div class="scenario-details">
+                            <h3>农业企业服务</h3>
+                            <p>为农业企业提供产业链协同管理和数字化运营服务，优化企业资源配置，提升生产效率和管理水平。</p>
+                            <ul class="feature-list">
+                                <li>数字化管理：提高运营效率</li>
+                                <li>供应链优化：降低成本，提高响应速度</li>
+                                <li>数据分析：支持科学决策</li>
+                                <li>产业链整合：强化产业协同</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 成功案例 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h3>成功案例</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="case-study">
+                        <img src="img/smart-service/case1.jpg" alt="江苏农服中心案例" class="img-responsive">
+                        <div class="case-content">
+                            <h3>江苏省农服中心数字化转型</h3>
+                            <p>为江苏省某县级农服中心提供智慧农服平台搭建和运营服务，覆盖全县2万户农户和100个农业合作社。项目成果：</p>
+                            <ul>
+                                <li>服务效率提升60%</li>
+                                <li>农资采购成本降低18%</li>
+                                <li>农机作业效率提高35%</li>
+                                <li>农户收入增加12%</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="case-study">
+                        <img src="img/smart-service/case2.jpg" alt="安徽合作社案例" class="img-responsive">
+                        <div class="case-content">
+                            <h3>安徽水稻产业联合体服务平台</h3>
+                            <p>为安徽某水稻产业联合体（包含50个合作社，覆盖10万亩水稻）搭建农服平台，实现产业链数字化管理。项目成果：</p>
+                            <ul>
+                                <li>统一标准生产面积达95%</li>
+                                <li>优质稻米比例提高40%</li>
+                                <li>产品溯源覆盖率100%</li>
+                                <li>产品均价提高25%</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 服务优势 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h3>服务优势</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="advantage-box">
+                        <div class="icon">
+                            <i class="fa fa-cogs fa-3x"></i>
+                        </div>
+                        <h4>资源整合</h4>
+                        <p>整合农资、农机、农技、金融等各类资源，提供一站式服务，降低农业生产成本</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="advantage-box">
+                        <div class="icon">
+                            <i class="fa fa-line-chart fa-3x"></i>
+                        </div>
+                        <h4>数据驱动</h4>
+                        <p>基于农业大数据分析，提供精准化、个性化服务，提高资源利用效率和服务质量</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="advantage-box">
+                        <div class="icon">
+                            <i class="fa fa-users fa-3x"></i>
+                        </div>
+                        <h4>专业团队</h4>
+                        <p>拥有一支专业的农业服务团队，具备丰富的实践经验和专业知识，提供高质量服务</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="advantage-box">
+                        <div class="icon">
+                            <i class="fa fa-refresh fa-3x"></i>
+                        </div>
+                        <h4>持续创新</h4>
+                        <p>不断探索农业服务新模式，引入先进技术和理念，持续提升服务水平和用户体验</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 服务流程 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h3>服务流程</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="process-timeline">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>需求采集</h4>
+                                <p>了解客户的具体需求，包括生产规模、作物类型、服务期望等信息</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>方案制定</h4>
+                                <p>根据需求定制个性化服务方案，明确服务内容、标准、时间和价格</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>服务实施</h4>
+                                <p>按照方案安排专业团队提供服务，确保服务质量和进度</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>效果评估</h4>
+                                <p>对服务成效进行评估，收集客户反馈，不断优化服务流程和内容</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>持续服务</h4>
+                                <p>建立长期服务关系，提供持续的技术支持和增值服务</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 定价模式 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h3>服务套餐</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="pricing-box">
+                        <div class="pricing-title">
+                            <h4>基础版</h4>
+                            <span class="price">¥1,980<small>/年</small></span>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li>基础农资采购服务</li>
+                                <li>基础农技咨询（5次/月）</li>
+                                <li>农机作业预约</li>
+                                <li>基础农业信息推送</li>
+                                <li>产品展示（3个产品）</li>
+                                <li class="disabled">专家在线问诊</li>
+                                <li class="disabled">个性化生产方案</li>
+                                <li class="disabled">金融服务接入</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">立即购买</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pricing-box featured">
+                        <div class="pricing-title">
+                            <h4>专业版</h4>
+                            <span class="price">¥4,980<small>/年</small></span>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li>优惠农资采购服务</li>
+                                <li>专业农技咨询（不限次数）</li>
+                                <li>农机作业优先预约</li>
+                                <li>定制化农业信息推送</li>
+                                <li>产品展示（10个产品）</li>
+                                <li>专家在线问诊（12次/年）</li>
+                                <li>个性化生产方案</li>
+                                <li class="disabled">金融服务接入</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">立即购买</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pricing-box">
+                        <div class="pricing-title">
+                            <h4>企业版</h4>
+                            <span class="price">¥9,980<small>/年</small></span>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li>定制化农资采购方案</li>
+                                <li>专家团队技术支持</li>
+                                <li>农机作业定制化服务</li>
+                                <li>农业大数据分析</li>
+                                <li>产品展示（不限数量）</li>
+                                <li>专家现场指导（6次/年）</li>
+                                <li>全程生产托管方案</li>
+                                <li>优惠金融服务接入</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">立即购买</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="cta-box">
+                        <h3>让农业变得更简单</h3>
+                        <p>立即体验智慧农服平台，享受一站式农业生产服务</p>
+                        <a href="contact.html" class="btn btn-primary">联系我们</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="widget">
+                        <h5 class="widgetheading" data-i18n="contact_title">联系我们</h5>
+                        <address>
+                            <strong>智农科技</strong><br>
+                            江苏省常州市武进区<br>
+                            中国常州科教城</address>
+                        <p>
+                            <i class="icon-phone"></i> (0519) 8888-8888<br>
+                            <i class="icon-envelope-alt"></i> contact@zhinongtech.com
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="widget">
+                        <h5 class="widgetheading">快速链接</h5>
+                        <ul class="link-list">
+                            <li><a href="#">最新动态</a></li>
+                            <li><a href="#">服务条款</a></li>
+                            <li><a href="#">隐私政策</a></li>
+                            <li><a href="#">加入我们</a></li>
+                            <li><a href="#">联系我们</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="widget">
+                        <h5 class="widgetheading">解决方案</h5>
+                        <ul class="link-list">
+                            <li><a href="#">多模态AI决策系统</a></li>
+                            <li><a href="#">清洁能源农机装备</a></li>
+                            <li><a href="#">全链条智能闭环</a></li>
+                            <li><a href="#">数字农服SaaS平台</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="widget">
+                        <h5 class="widgetheading">成功案例</h5>
+                        <ul class="link-list">
+                            <li><a href="#">山东智慧农业示范区：作业成本降低25%</a></li>
+                            <li><a href="#">内蒙古智能农场项目：夜间作业率提升40%</a></li>
+                            <li><a href="#">江苏绿色农业基地：化肥使用减少22%</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sub-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="copyright">
+                            <p>
+                                <span data-i18n="footer_copyright">版权所有 © 2024 智农科技</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul class="social-network">
+                            <li><a href="#" data-placement="top" title="WeChat"><i class="fa fa-weixin"></i></a></li>
+                            <li><a href="#" data-placement="top" title="Weibo"><i class="fa fa-weibo"></i></a></li>
+                            <li><a href="#" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#" data-placement="top" title="Bilibili"><i class="fa fa-play-circle"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.fancybox-media.js"></script> 
+<script src="js/portfolio/jquery.quicksand.js"></script>
+<script src="js/portfolio/setting.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/owl-carousel/owl.carousel.js"></script>
+
+<!-- 添加i18n脚本 -->
+<script type="module" src="js/i18n.js"></script>
+<script>
+    // 确保DOM加载完成后初始化i18n
+    document.addEventListener('DOMContentLoaded', function() {
+        // i18n实例会在i18n.js中自动创建
+    });
+</script>
+</body>
+</html> 

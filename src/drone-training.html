@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title data-i18n="site_title">智农科技 - 农业无人机培训中心</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="智农无人机培训中心，打造中国领先的农业无人机人才培养基地" />
+<meta name="author" content="智农" />
+ 
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
+<link href="css/jcarousel.css" rel="stylesheet" />
+<link href="css/flexslider.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" />
+
+<!-- 语言选择器样式 -->
+<style>
+.language-selector-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 1000;
+}
+.language-selector {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: white;
+}
+</style>
+</head>
+<body>
+<div id="wrapper">
+    <!-- 语言选择器 -->
+    <div class="language-selector-container">
+        <select id="language-selector" class="language-selector" onchange="window.i18n.setLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="zh">中文</option>
+        </select>
+    </div>
+
+    <!-- 导航栏 -->
+    <header>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"/></a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html" data-i18n="nav_home">首页</a></li>
+                        <li class="active"><a href="drone-training.html" data-i18n="nav_drone_training">农业无人机培训</a></li>
+                        <li><a href="smart-machinery.html" data-i18n="nav_smart_machinery">智能农机</a></li>
+                        <li><a href="smart-farm.html" data-i18n="nav_smart_farm">智慧农场</a></li>
+                        <li><a href="smart-service.html" data-i18n="nav_smart_service">智慧农服</a></li>
+                        <li><a href="about.html" data-i18n="nav_about">关于我们</a></li>
+                        <li><a href="contact.html" data-i18n="nav_contact">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 页面标题 -->
+    <section id="inner-headline">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="pageTitle" data-i18n="drone_training_section_title">智农科技无人机培训中心</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主要内容 -->
+    <section id="content">
+        <div class="container">
+            <!-- 培训中心介绍 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="about-logo">
+                        <h3 data-i18n="drone_training_section_subtitle">打造中国领先的农业无人机人才培养基地</h3>
+                        <p data-i18n="drone_training_desc">与中国农业大学无人机系统研究院深度合作，打造专业的农业无人机培训基地。我们提供从基础操作到高级应用的全方位培训课程，帮助农民掌握智慧农业新技能。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 培训成果统计 -->
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-box">
+                        <h2 data-i18n="training_stats_1">3000+</h2>
+                        <p data-i18n="training_stats_1_desc">培训学员</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-box">
+                        <h2 data-i18n="training_stats_2">98%</h2>
+                        <p data-i18n="training_stats_2_desc">就业率</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-box">
+                        <h2 data-i18n="training_stats_3">50+</h2>
+                        <p data-i18n="training_stats_3_desc">合作企业</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-box">
+                        <h2 data-i18n="training_stats_4">100%</h2>
+                        <p data-i18n="training_stats_4_desc">证书通过率</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 课程体系 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h3 data-i18n="course_section_title">培训课程体系</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- 初级课程 -->
+                <div class="col-md-4">
+                    <div class="course-card basic">
+                        <div class="course-header">
+                            <h3 data-i18n="course_basic_name">初级飞手班</h3>
+                            <p data-i18n="course_basic_duration">课程时长：2周</p>
+                            <p data-i18n="course_basic_price">学费：4800元</p>
+                        </div>
+                        <div class="course-content">
+                            <ul class="feature-list">
+                                <li data-i18n="course_basic_features.0">无人机基础知识</li>
+                                <li data-i18n="course_basic_features.1">安全规程与法规</li>
+                                <li data-i18n="course_basic_features.2">基础飞行操作</li>
+                                <li data-i18n="course_basic_features.3">模拟器训练</li>
+                                <li data-i18n="course_basic_features.4">实机操作基础</li>
+                            </ul>
+                        </div>
+                        <div class="course-footer">
+                            <a href="#" class="btn btn-primary" data-i18n="drone_training_cta">立即报名</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 高级课程 -->
+                <div class="col-md-4">
+                    <div class="course-card advanced">
+                        <div class="course-header">
+                            <h3 data-i18n="course_advanced_name">高级飞手班</h3>
+                            <p data-i18n="course_advanced_duration">课程时长：3周</p>
+                            <p data-i18n="course_advanced_price">学费：6800元</p>
+                        </div>
+                        <div class="course-content">
+                            <ul class="feature-list">
+                                <li data-i18n="course_advanced_features.0">高级飞行技术</li>
+                                <li data-i18n="course_advanced_features.1">复杂环境作业</li>
+                                <li data-i18n="course_advanced_features.2">航线规划</li>
+                                <li data-i18n="course_advanced_features.3">设备维护保养</li>
+                                <li data-i18n="course_advanced_features.4">应急处置</li>
+                            </ul>
+                        </div>
+                        <div class="course-footer">
+                            <a href="#" class="btn btn-primary" data-i18n="drone_training_cta">立即报名</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 专家课程 -->
+                <div class="col-md-4">
+                    <div class="course-card expert">
+                        <div class="course-header">
+                            <h3 data-i18n="course_expert_name">农业应用专家班</h3>
+                            <p data-i18n="course_expert_duration">课程时长：4周</p>
+                            <p data-i18n="course_expert_price">学费：9800元</p>
+                        </div>
+                        <div class="course-content">
+                            <ul class="feature-list">
+                                <li data-i18n="course_expert_features.0">农业知识体系</li>
+                                <li data-i18n="course_expert_features.1">作物识别与诊断</li>
+                                <li data-i18n="course_expert_features.2">精准施药技术</li>
+                                <li data-i18n="course_expert_features.3">团队管理</li>
+                                <li data-i18n="course_expert_features.4">商业运营</li>
+                            </ul>
+                        </div>
+                        <div class="course-footer">
+                            <a href="#" class="btn btn-primary" data-i18n="drone_training_cta">立即报名</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 师资力量 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h3 data-i18n="faculty_section_title">师资力量</h3>
+                        <p data-i18n="faculty_intro">我们的教师团队由资深无人机专家和农业技术专家组成，平均具有10年以上行业经验</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- 教师1 -->
+                <div class="col-md-4">
+                    <div class="faculty-card">
+                        <div class="faculty-image">
+                            <img src="img/faculty/teacher1.jpg" alt="Professor Wang">
+                        </div>
+                        <div class="faculty-info">
+                            <h4 data-i18n="faculty_1_name">王教授</h4>
+                            <p class="title" data-i18n="faculty_1_title">首席培训专家</p>
+                            <p class="desc" data-i18n="faculty_1_desc">中国农业大学无人机系统研究院专家，20年农业科技经验</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 教师2 -->
+                <div class="col-md-4">
+                    <div class="faculty-card">
+                        <div class="faculty-image">
+                            <img src="img/faculty/teacher2.jpg" alt="Engineer Li">
+                        </div>
+                        <div class="faculty-info">
+                            <h4 data-i18n="faculty_2_name">李工程师</h4>
+                            <p class="title" data-i18n="faculty_2_title">高级飞行教练</p>
+                            <p class="desc" data-i18n="faculty_2_desc">前某大型无人机公司技术总监，15年无人机研发与培训经验</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 教师3 -->
+                <div class="col-md-4">
+                    <div class="faculty-card">
+                        <div class="faculty-image">
+                            <img src="img/faculty/teacher3.jpg" alt="Instructor Zhang">
+                        </div>
+                        <div class="faculty-info">
+                            <h4 data-i18n="faculty_3_name">张教练</h4>
+                            <p class="title" data-i18n="faculty_3_title">实训总教练</p>
+                            <p class="desc" data-i18n="faculty_3_desc">持有AOPA高级飞手证书，10年无人机实操教学经验</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 培训基地 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h3 data-i18n="training_facility_title">培训基地</h3>
+                        <p data-i18n="training_facility_desc">配备先进的模拟器训练室、理论教室和1000亩实训基地</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="facility-image">
+                        <img src="img/facility/simulator.jpg" alt="模拟器训练室" class="img-responsive">
+                        <div class="facility-overlay">
+                            <h4>模拟器训练室</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="facility-image">
+                        <img src="img/facility/classroom.jpg" alt="理论教室" class="img-responsive">
+                        <div class="facility-overlay">
+                            <h4>理论教室</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="facility-image">
+                        <img src="img/facility/practice-field.jpg" alt="实训基地" class="img-responsive">
+                        <div class="facility-overlay">
+                            <h4>实训基地</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="facility-image">
+                        <img src="img/facility/drones.jpg" alt="训练无人机" class="img-responsive">
+                        <div class="facility-overlay">
+                            <h4>训练无人机</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 学员反馈 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h3 data-i18n="testimonial_section_title">学员反馈</h3>
+                        <p data-i18n="testimonial_section_subtitle">来自各地学员的真实评价</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial-item">
+                        <blockquote>
+                            <p>"通过智农的培训，我从一个农业小白成长为专业的无人机操作手。现在我已经成为我们村的技术带头人，为村民提供植保服务。"</p>
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <img src="img/testimonials/user1.jpg" alt="李明" class="img-circle">
+                            <div>
+                                <h4>李明</h4>
+                                <p>山东省菏泽市，植保服务队长</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-item">
+                        <blockquote>
+                            <p>"培训内容非常系统，从理论到实践，再到应用场景的讲解都很全面。我现在在一家农业科技公司担任高级飞手，月薪过万。"</p>
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <img src="img/testimonials/user2.jpg" alt="王丽" class="img-circle">
+                            <div>
+                                <h4>王丽</h4>
+                                <p>江苏省南京市，企业无人机操作员</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-item">
+                        <blockquote>
+                            <p>"智农的培训让我看到了农业现代化的希望。作为一个返乡创业的大学生，我现在服务的农田面积已经超过5000亩。"</p>
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <img src="img/testimonials/user3.jpg" alt="张强" class="img-circle">
+                            <div>
+                                <h4>张强</h4>
+                                <p>河南省信阳市，返乡创业大学生</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="widget">
+                        <h5 class="widgetheading" data-i18n="contact_title">联系我们</h5>
+                        <address>
+                            <strong>智农科技</strong><br>
+                            江苏省常州市武进区<br>
+                            中国常州科教城</address>
+                        <p>
+                            <i class="icon-phone"></i> (0519) 8888-8888<br>
+                            <i class="icon-envelope-alt"></i> contact@zhinongtech.com
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="widget">
+                        <h5 class="widgetheading">快速链接</h5>
+                        <ul class="link-list">
+                            <li><a href="#">最新动态</a></li>
+                            <li><a href="#">服务条款</a></li>
+                            <li><a href="#">隐私政策</a></li>
+                            <li><a href="#">加入我们</a></li>
+                            <li><a href="#">联系我们</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="widget">
+                        <h5 class="widgetheading">解决方案</h5>
+                        <ul class="link-list">
+                            <li><a href="#">多模态AI决策系统</a></li>
+                            <li><a href="#">清洁能源农机装备</a></li>
+                            <li><a href="#">全链条智能闭环</a></li>
+                            <li><a href="#">数字农服SaaS平台</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="widget">
+                        <h5 class="widgetheading">成功案例</h5>
+                        <ul class="link-list">
+                            <li><a href="#">山东智慧农业示范区：作业成本降低25%</a></li>
+                            <li><a href="#">内蒙古智能农场项目：夜间作业率提升40%</a></li>
+                            <li><a href="#">江苏绿色农业基地：化肥使用减少22%</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sub-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="copyright">
+                            <p>
+                                <span data-i18n="footer_copyright">版权所有 © 2024 智农科技</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul class="social-network">
+                            <li><a href="#" data-placement="top" title="WeChat"><i class="fa fa-weixin"></i></a></li>
+                            <li><a href="#" data-placement="top" title="Weibo"><i class="fa fa-weibo"></i></a></li>
+                            <li><a href="#" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#" data-placement="top" title="Bilibili"><i class="fa fa-play-circle"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.fancybox-media.js"></script> 
+<script src="js/portfolio/jquery.quicksand.js"></script>
+<script src="js/portfolio/setting.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/owl-carousel/owl.carousel.js"></script>
+
+<!-- 添加i18n脚本 -->
+<script type="module" src="js/i18n.js"></script>
+<script>
+    // 确保DOM加载完成后初始化i18n
+    document.addEventListener('DOMContentLoaded', function() {
+        // i18n实例会在i18n.js中自动创建
+    });
+</script>
+</body>
+</html> 
