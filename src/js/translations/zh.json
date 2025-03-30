@@ -53,5 +53,20 @@
     "team_member_4_desc": "原京东智慧农业运营副总裁，原大北农集团市场总监，农业互联网专家。",
     "team_member_5_name": "Thomas Plocher",
     "team_member_5_title": "战略合伙人",
-    "team_member_5_desc": "原道依茨电气化总监，德国斯图加特大学博士，25年国际农机电气化经验。"
+    "team_member_5_desc": "原道依茨电气化总监，德国斯图加特大学博士，25年国际农机电气化经验。",
+    "drone_training_title": "农业无人机培训中心",
+    "drone_training_desc": "与中国农业大学无人机系统研究院深度合作，打造专业的农业无人机培训基地。我们提供从基础操作到高级应用的全方位培训课程，帮助农民掌握智慧农业新技能。",
+    "drone_training_feature_1": "专业认证课程",
+    "drone_training_feature_1_desc": "联合中国农业大学开发的专业课程体系，培训完成后颁发权威认证证书",
+    "drone_training_feature_2": "实践为主",
+    "drone_training_feature_2_desc": "70%实践操作时间，配备先进的模拟器和实训无人机，确保学员充分掌握技能",
+    "drone_training_feature_3": "一站式服务",
+    "drone_training_feature_3_desc": "提供培训、认证、就业推荐一站式服务，帮助学员快速进入行业",
+    "drone_training_stats_1": "3000+",
+    "drone_training_stats_1_desc": "已培训学员",
+    "drone_training_stats_2": "98%",
+    "drone_training_stats_2_desc": "就业率",
+    "drone_training_stats_3": "50+",
+    "drone_training_stats_3_desc": "合作企业",
+    "drone_training_cta": "立即报名"
 } 

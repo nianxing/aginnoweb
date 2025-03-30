@@ -1688,4 +1688,94 @@ padding-top: 12px;
 
 }
 
+/* 无人机培训业务样式 */
+.featured-service {
+    margin-bottom: 40px;
+}
+
+.featured-service .card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.featured-service .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.featured-service .featured-content {
+    padding: 30px;
+}
+
+.featured-service h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.featured-service .stats {
+    margin: 30px 0;
+}
+
+.featured-service .stat-item {
+    text-align: center;
+    padding: 15px;
+    border-radius: 6px;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.featured-service .stat-item:hover {
+    background: #e9ecef;
+}
+
+.featured-service .stat-item h3 {
+    color: #2e6da4;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.featured-service .stat-item p {
+    color: #666;
+    margin: 0;
+    font-size: 14px;
+}
+
+.featured-service .btn-primary {
+    background: #2e6da4;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.featured-service .btn-primary:hover {
+    background: #245580;
+    transform: translateY(-2px);
+}
+
+/* 无人机培训特色样式 */
+.info-blocks {
+    margin-bottom: 30px;
+}
+
+.info-blocks .icon-info-blocks {
+    font-size: 40px;
+    color: #2e6da4;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.info-blocks:hover .icon-info-blocks {
+    transform: scale(1.1);
+    color: #245580;
+}
+
  
