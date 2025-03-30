@@ -1778,4 +1778,271 @@ padding-top: 12px;
     color: #245580;
 }
 
+/* 培训页面样式 */
+/* 统计数据样式 */
+.stat-box {
+    text-align: center;
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+}
+
+.stat-box h2 {
+    color: #2e6da4;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.stat-box p {
+    color: #666;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* 课程卡片样式 */
+.course-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+}
+
+.course-card.basic .course-header {
+    background: #2e6da4;
+}
+
+.course-card.advanced .course-header {
+    background: #5cb85c;
+}
+
+.course-card.expert .course-header {
+    background: #f0ad4e;
+}
+
+.course-header {
+    padding: 25px;
+    color: #fff;
+    text-align: center;
+}
+
+.course-header h3 {
+    color: #fff;
+    margin: 0 0 15px 0;
+    font-size: 24px;
+}
+
+.course-header p {
+    color: rgba(255,255,255,0.9);
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.course-content {
+    padding: 25px;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-list li {
+    padding: 10px 0;
+    color: #666;
+    border-bottom: 1px solid #eee;
+}
+
+.feature-list li:last-child {
+    border-bottom: none;
+}
+
+.feature-list li:before {
+    content: "✓";
+    color: #5cb85c;
+    margin-right: 10px;
+}
+
+.course-footer {
+    padding: 20px;
+    text-align: center;
+    background: #f8f9fa;
+}
+
+/* 师资力量样式 */
+.faculty-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.faculty-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+}
+
+.faculty-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.faculty-image img {
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.faculty-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.faculty-info h4 {
+    color: #333;
+    margin: 0 0 10px 0;
+    font-size: 20px;
+}
+
+.faculty-info .title {
+    color: #2e6da4;
+    font-size: 16px;
+    margin: 0 0 10px 0;
+}
+
+.faculty-info .desc {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* 培训设施样式 */
+.facility-image {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.facility-image img {
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.facility-image:hover img {
+    transform: scale(1.1);
+}
+
+.facility-image h4 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 15px;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* 学员反馈样式 */
+.testimonial-carousel {
+    padding: 30px 0;
+}
+
+.testimonial-item {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    margin: 15px;
+    transition: all 0.3s ease;
+}
+
+.testimonial-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+}
+
+.testimonial-content {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+
+.testimonial-content:before {
+    content: """;
+    font-size: 60px;
+    color: #2e6da4;
+    position: absolute;
+    left: -10px;
+    top: -20px;
+    opacity: 0.3;
+}
+
+.testimonial-content p {
+    color: #666;
+    font-style: italic;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.testimonial-author {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.testimonial-author h4 {
+    color: #333;
+    font-size: 18px;
+    margin: 0 0 5px 0;
+}
+
+.testimonial-author p {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .stat-box {
+        margin-bottom: 20px;
+    }
+    
+    .course-card {
+        margin-bottom: 20px;
+    }
+    
+    .faculty-card {
+        margin-bottom: 20px;
+    }
+    
+    .facility-image {
+        margin-bottom: 20px;
+    }
+}
+
  
