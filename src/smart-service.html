@@ -82,6 +82,122 @@
     color: #444;
 }
 
+/* 新的功能卡片样式 - 无图片版本 */
+.feature-card {
+    border-radius: 8px;
+    background: white;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-top: 4px solid #4CAF50;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.feature-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(76, 175, 80, 0.03) 0%, rgba(76, 175, 80, 0.05) 100%);
+    z-index: 0;
+}
+
+.feature-icon {
+    font-size: 36px;
+    color: #4CAF50;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
+    flex-grow: 1;
+    position: relative;
+    z-index: 1;
+}
+
+/* 新的应用场景卡片样式 - 无图片版本 */
+.scenario-feature-card {
+    border-radius: 8px;
+    background: white;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.scenario-feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.scenario-feature-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #4CAF50;
+}
+
+.scenario-feature-card h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #2E7D32;
+    padding-left: 15px;
+}
+
+.scenario-feature-card p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.scenario-feature-card .feature-list {
+    padding-left: 0;
+    margin-top: auto;
+}
+
+.scenario-feature-card .feature-list li {
+    padding: 8px 0 8px 30px;
+    margin-bottom: 5px;
+    background-color: rgba(76, 175, 80, 0.05);
+    border-radius: 4px;
+}
+
+.scenario-feature-card .feature-list li:before {
+    left: 10px;
+    top: 9px;
+}
+
 /* 功能卡片优化 */
 .card {
     margin-bottom: 30px;
@@ -576,71 +692,70 @@
             </div>
             <div class="row equal-height service-v1 margin-bottom-40">
                 <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="img-responsive" src="img/smart-service/function1.jpg" alt="农资供应">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fa fa-cog"></i>
                         </div>
-                        <div class="card-content">
-                            <h3>农资供应服务</h3>
-                            <p>整合优质农资供应商资源，提供种子、化肥、农药等农资在线采购服务，实现优质农资直供，降低农资成本，保障农资质量。</p>
-                        </div>
+                        <h3>智能农机租赁</h3>
+                        <p>提供智能播种机、智能驾驶拖拉机、智能喷洒设备等先进农机设备的共享租赁服务，降低农户购置成本，提高农机利用率，支持在线预约和智能调度。</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="img-responsive" src="img/smart-service/function2.jpg" alt="农机服务">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fa fa-cogs"></i>
                         </div>
-                        <div class="card-content">
-                            <h3>农机作业服务</h3>
-                            <p>建立农机共享平台，整合各类农机资源，提供耕整地、播种、植保、收获等全程机械化作业服务，农户可在线预约，实现精准作业。</p>
-                        </div>
+                        <h3>智能作业服务</h3>
+                        <p>基于农场地理信息和作物生长状态，提供厘米级精准智能化农机作业，支持自动作业、变量作业、实时监控和远程操控，实现全程自动化、数据化、标准化的农业生产。</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="img-responsive" src="img/smart-service/function3.jpg" alt="技术服务">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fa fa-leaf"></i>
                         </div>
-                        <div class="card-content">
-                            <h3>农技指导服务</h3>
-                            <p>汇聚农业专家资源，提供线上咨询、远程诊断、现场指导等专业技术服务，帮助解决生产中的技术难题，提升科学种植水平。</p>
-                        </div>
+                        <h3>农资供应服务</h3>
+                        <p>整合优质农资供应商资源，提供种子、化肥、农药等农资在线采购服务，实现优质农资直供，降低农资成本，保障农资质量。</p>
                     </div>
                 </div>
             </div>
             <div class="row equal-height service-v1 margin-bottom-40">
                 <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="img-responsive" src="img/smart-service/function4.jpg" alt="金融服务">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fa fa-users"></i>
                         </div>
-                        <div class="card-content">
-                            <h3>农业金融服务</h3>
-                            <p>联合金融机构，基于生产数据和信用记录，为农户和农场提供贷款、保险、支付等定制化金融服务，解决农业生产资金需求。</p>
-                        </div>
+                        <h3>农技指导服务</h3>
+                        <p>汇聚农业专家资源，提供线上咨询、远程诊断、现场指导等专业技术服务，帮助解决生产中的技术难题，提升科学种植水平。</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="img-responsive" src="img/smart-service/function5.jpg" alt="市场营销">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fa fa-credit-card"></i>
                         </div>
-                        <div class="card-content">
-                            <h3>农产品营销服务</h3>
-                            <p>提供农产品溯源、品牌打造、线上销售等全方位营销服务，打通产销渠道，帮助农产品提质增效，实现优质优价。</p>
-                        </div>
+                        <h3>农业金融服务</h3>
+                        <p>联合金融机构，基于生产数据和信用记录，为农户和农场提供贷款、保险、支付等定制化金融服务，解决农业生产资金需求。</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="img-responsive" src="img/smart-service/function6.jpg" alt="数据分析">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fa fa-shopping-cart"></i>
                         </div>
-                        <div class="card-content">
-                            <h3>农业数据分析</h3>
-                            <p>基于大数据分析技术，对农业生产、营销、气象等数据进行深度挖掘，提供市场趋势、生产决策、风险预警等信息服务。</p>
+                        <h3>农产品营销服务</h3>
+                        <p>提供农产品溯源、品牌打造、线上销售等全方位营销服务，打通产销渠道，帮助农产品提质增效，实现优质优价。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row equal-height service-v1 margin-bottom-40">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fa fa-bar-chart"></i>
                         </div>
+                        <h3>农业数据分析</h3>
+                        <p>基于大数据分析技术，对农业生产、营销、气象等数据进行深度挖掘，提供市场趋势、生产决策、风险预警等信息服务。</p>
                     </div>
                 </div>
             </div>
@@ -655,122 +770,61 @@
             </div>
             <div class="row equal-height">
                 <div class="col-md-6">
-                    <div class="scenario-card">
-                        <div class="scenario-image">
-                            <img src="img/smart-service/scenario1.jpg" alt="小农户服务" class="img-responsive">
-                        </div>
-                        <div class="scenario-details">
-                            <h3>小农户生产服务</h3>
-                            <p>针对小规模农户提供"一站式"农业生产服务，解决其在技术、装备、资金等方面的短板，降低生产成本，提高农产品质量。</p>
-                            <ul class="feature-list">
-                                <li>农资团购：降低采购成本20%以上</li>
-                                <li>农机共享：降低机械化作业成本30%</li>
-                                <li>技术指导：提高种植成功率25%</li>
-                                <li>产品销售：提高农产品售价15%</li>
-                            </ul>
-                        </div>
+                    <div class="scenario-feature-card">
+                        <h3>小农户生产服务</h3>
+                        <p>针对小规模农户提供"一站式"农业生产服务，解决其在技术、装备、资金等方面的短板，降低生产成本，提高农产品质量。</p>
+                        <ul class="feature-list">
+                            <li>农资团购：降低采购成本20%以上</li>
+                            <li>农机共享：降低机械化作业成本30%</li>
+                            <li>技术指导：提高种植成功率25%</li>
+                            <li>产品销售：提高农产品售价15%</li>
+                            <li>智能作业：提供简易型智能农机作业服务</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="scenario-card">
-                        <div class="scenario-image">
-                            <img src="img/smart-service/scenario2.jpg" alt="合作社服务" class="img-responsive">
-                        </div>
-                        <div class="scenario-details">
-                            <h3>农民合作社服务</h3>
-                            <p>为农民合作社提供农业生产全程托管服务和组织管理服务，提升合作社的组织化水平和市场竞争力。</p>
-                            <ul class="feature-list">
-                                <li>统一采购：规模化采购，降低成本</li>
-                                <li>标准化生产：提高产品质量和一致性</li>
-                                <li>集中销售：增强市场议价能力</li>
-                                <li>品牌建设：打造区域优质品牌</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="scenario-card">
-                        <div class="scenario-image">
-                            <img src="img/smart-service/scenario3.jpg" alt="家庭农场服务" class="img-responsive">
-                        </div>
-                        <div class="scenario-details">
-                            <h3>家庭农场服务</h3>
-                            <p>面向家庭农场提供专业化、精准化的生产管理服务和营销支持，帮助其降本增效，提升经营管理水平。</p>
-                            <ul class="feature-list">
-                                <li>精准农业方案：提高资源利用效率</li>
-                                <li>专家顾问服务：解决技术难题</li>
-                                <li>农产品溯源：增加产品附加值</li>
-                                <li>品牌营销：拓展高端销售渠道</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="scenario-card">
-                        <div class="scenario-image">
-                            <img src="img/smart-service/scenario4.jpg" alt="农业企业服务" class="img-responsive">
-                        </div>
-                        <div class="scenario-details">
-                            <h3>农业企业服务</h3>
-                            <p>为农业企业提供产业链协同管理和数字化运营服务，优化企业资源配置，提升生产效率和管理水平。</p>
-                            <ul class="feature-list">
-                                <li>数字化管理：提高运营效率</li>
-                                <li>供应链优化：降低成本，提高响应速度</li>
-                                <li>数据分析：支持科学决策</li>
-                                <li>产业链整合：强化产业协同</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 智能农机服务 -->
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-title">
-                        <h3>智能农机服务</h3>
+                    <div class="scenario-feature-card">
+                        <h3>农民合作社服务</h3>
+                        <p>为农民合作社提供农业生产全程托管服务和组织管理服务，提升合作社的组织化水平和市场竞争力。</p>
+                        <ul class="feature-list">
+                            <li>统一采购：规模化采购，降低成本</li>
+                            <li>标准化生产：提高产品质量和一致性</li>
+                            <li>集中销售：增强市场议价能力</li>
+                            <li>品牌建设：打造区域优质品牌</li>
+                            <li>智能农机调度：优化农机资源配置，提高作业效率</li>
+                        </ul>
                     </div>
                 </div>
             </div>
             <div class="row equal-height">
                 <div class="col-md-6">
-                    <div class="scenario-card">
-                        <div class="scenario-image">
-                            <img src="img/smart-service/smart-machinery1.jpg" alt="农机租赁服务" class="img-responsive">
-                        </div>
-                        <div class="scenario-details">
-                            <h3>农机租赁服务</h3>
-                            <p>提供先进农机设备的共享租赁服务，包括智能播种机、智能驾驶拖拉机、智能喷洒设备等，降低农户购置成本，提高农机利用率。</p>
-                            <ul class="feature-list">
-                                <li>全程信息化：在线预约、下单、支付</li>
-                                <li>智能调度：最优化农机资源配置</li>
-                                <li>精准定价：按使用面积、时长计费</li>
-                                <li>保障服务：设备维护、技术支持</li>
-                            </ul>
-                        </div>
+                    <div class="scenario-feature-card">
+                        <h3>家庭农场服务</h3>
+                        <p>面向家庭农场提供专业化、精准化的生产管理服务和营销支持，帮助其降本增效，提升经营管理水平。</p>
+                        <ul class="feature-list">
+                            <li>精准农业方案：提高资源利用效率</li>
+                            <li>专家顾问服务：解决技术难题</li>
+                            <li>农产品溯源：增加产品附加值</li>
+                            <li>品牌营销：拓展高端销售渠道</li>
+                            <li>智能作业：变量施肥、精准播种等定制化服务</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="scenario-card">
-                        <div class="scenario-image">
-                            <img src="img/smart-service/smart-machinery2.jpg" alt="智能作业服务" class="img-responsive">
-                        </div>
-                        <div class="scenario-details">
-                            <h3>智能作业服务</h3>
-                            <p>基于农场地理信息和作物生长状态，提供精准智能化农机作业服务，实现全程自动化、数据化、标准化的农业生产流程。</p>
-                            <ul class="feature-list">
-                                <li>自动作业：智能精准作业（作业精度厘米级）</li>
-                                <li>变量作业：根据地块差异智能调整</li>
-                                <li>数据监控：实时监测作业质量</li>
-                                <li>远程操控：移动端远程管理农机</li>
-                            </ul>
-                        </div>
+                    <div class="scenario-feature-card">
+                        <h3>农业企业服务</h3>
+                        <p>为农业企业提供产业链协同管理和数字化运营服务，优化企业资源配置，提升生产效率和管理水平。</p>
+                        <ul class="feature-list">
+                            <li>数字化管理：提高运营效率</li>
+                            <li>供应链优化：降低成本，提高响应速度</li>
+                            <li>数据分析：支持科学决策</li>
+                            <li>产业链整合：强化产业协同</li>
+                            <li>智能农机管理：实时监控设备状态，远程农机诊断</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-
+            
             <!-- 服务优势 -->
             <div class="row">
                 <div class="col-md-12">
