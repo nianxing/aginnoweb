@@ -225,36 +225,24 @@
 			<div class="col-md-6">
 				<div class="contact-form">
 					<h3 data-i18n="contact_form_title">给我们留言</h3>
-					<p data-i18n="contact_form_desc">如有任何问题或建议，欢迎填写以下表单联系我们。您的消息将直接发送至我们的邮箱 postmaster@aginno.com.cn，我们将尽快回复您。</p>
-					<div class="alert alert-success hidden" id="contactSuccess">
-						<strong>发送成功!</strong> 您的消息已成功发送到我们的邮箱。
+					<p data-i18n="contact_form_desc">如有任何问题或建议，请填写以下表单。您的留言将直接发送至我们的系统中，我们会尽快与您联系。</p>
+
+					<!-- Google Forms 嵌入 -->
+					<div class="google-form-container" style="height: 640px; overflow: hidden;">
+						<!-- 替换以下链接为您的Google表单嵌入链接 -->
+						<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSelgGUNovBefv79-rxfkvHpWMDbq-u34Wj3L5v7HGFiHp4W9g/viewform?usp=header" 
+							width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">
+							正在加载表单...
+						</iframe>
 					</div>
-					<div class="alert alert-danger hidden" id="contactError">
-						<strong>发送失败!</strong> 消息发送过程中出现错误，请稍后再试或直接发送邮件至 postmaster@aginno.com.cn。
+					
+					<!-- 备用联系方式 -->
+					<div class="direct-email" style="margin-top: 30px; padding: 15px; background-color: #f8f8f8; border-radius: 5px; text-align: center;">
+						<p style="margin-bottom: 10px;">您也可以直接发送邮件至:</p>
+						<a href="mailto:postmaster@aginno.com.cn" class="btn" style="background-color: #4CAF50; color: white; padding: 8px 15px; border-radius: 4px; text-decoration: none; display: inline-block;">
+							<i class="fa fa-envelope" style="margin-right: 8px;"></i>postmaster@aginno.com.cn
+						</a>
 					</div>
-					<form id="contact-form" role="form" action="mailto:postmaster@aginno.com.cn" method="post" enctype="text/plain" novalidate="novalidate">
-						<div class="form-group has-feedback">
-							<label for="name" data-i18n="contact_form_name">姓名*</label>
-							<input type="text" class="form-control" id="name" name="name" placeholder="">
-							<i class="fa fa-user form-control-feedback"></i>
-						</div>
-						<div class="form-group has-feedback">
-							<label for="email" data-i18n="contact_form_email">电子邮箱*</label>
-							<input type="email" class="form-control" id="email" name="email" placeholder="">
-							<i class="fa fa-envelope form-control-feedback"></i>
-						</div>
-						<div class="form-group has-feedback">
-							<label for="subject" data-i18n="contact_form_subject">主题*</label>
-							<input type="text" class="form-control" id="subject" name="subject" placeholder="">
-							<i class="fa fa-tag form-control-feedback"></i>
-						</div>
-						<div class="form-group has-feedback">
-							<label for="message" data-i18n="contact_form_message">留言内容*</label>
-							<textarea class="form-control" rows="6" id="message" name="message" placeholder=""></textarea>
-							<i class="fa fa-pencil form-control-feedback"></i>
-						</div>
-						<input type="submit" value="提交" data-i18n="contact_form_submit" class="btn btn-submit">
-					</form>
 				</div>
 			</div>
 			
@@ -285,10 +273,6 @@
 						<div class="icon">
 							<i class="fa fa-clock-o"></i>
 						</div>
-						<div class="content">
-							<h5 data-i18n="contact_hours_title">工作时间</h5>
-							<p data-i18n="contact_hours">周一至周五: 9:00 - 18:00<br>周末: 休息</p>
-						</div>
 					</div>
 					
 					<div class="contact-details">
@@ -308,7 +292,15 @@
 				
 				<!-- 百度地图容器 -->
 				<div class="map-container">
-					<div id="baiduMap"></div>
+					<div id="baiduMap">
+						<!-- 地图加载失败时显示的内容 -->
+						<div id="map-fallback" style="display:none; padding: 20px; height:100%; background-color: #f8f8f8; text-align: center;">
+							<i class="fa fa-map-marker" style="font-size: 48px; color: #4CAF50; margin-bottom: 20px;"></i>
+							<h4>公司地址</h4>
+							<p>江苏省苏州市吴中区太湖国家旅游度假区香山街道孙武路2035号太湖科创中心320-29室</p>
+							<a href="https://j.map.baidu.com/20/K6TU" target="_blank" class="btn btn-primary" style="margin-top: 15px;">在百度地图中查看</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -388,38 +380,68 @@
 <script type="text/javascript">
     // 百度地图API功能
     function initMap() {
-        var map = new BMap.Map("baiduMap");
-        var point = new BMap.Point(120.641042, 31.282461); // 太湖科创中心的经纬度坐标
-        map.centerAndZoom(point, 17);
-        map.enableScrollWheelZoom();   // 启用滚轮放大缩小
-        
-        var marker = new BMap.Marker(point);  // 创建标注
-        map.addOverlay(marker);               // 将标注添加到地图中
-        
-        // 添加信息窗口
-        var infoWindow = new BMap.InfoWindow(
-            "<div style='padding:10px;'>" +
-            "<h4 style='margin-top:0;'>苏州智农未来科技有限公司</h4>" +
-            "<p style='margin-bottom:0;'>太湖国家旅游度假区香山街道孙武路2035号太湖科创中心320-29室</p>" +
-            "</div>", {
-                width: 250,
-                title: "公司地址"
-            }
-        );
-        
-        marker.addEventListener("click", function(){
-            this.openInfoWindow(infoWindow);
-        });
-        
-        // 初始打开信息窗口
-        marker.openInfoWindow(infoWindow);
+        try {
+            var map = new BMap.Map("baiduMap");
+            var point = new BMap.Point(120.641042, 31.282461); // 太湖科创中心的经纬度坐标
+            map.centerAndZoom(point, 17);
+            map.enableScrollWheelZoom();   // 启用滚轮放大缩小
+            
+            var marker = new BMap.Marker(point);  // 创建标注
+            map.addOverlay(marker);               // 将标注添加到地图中
+            
+            // 添加信息窗口
+            var infoWindow = new BMap.InfoWindow(
+                "<div style='padding:10px;'>" +
+                "<h4 style='margin-top:0;'>苏州智农未来科技有限公司</h4>" +
+                "<p style='margin-bottom:0;'>太湖国家旅游度假区香山街道孙武路2035号太湖科创中心320-29室</p>" +
+                "</div>", {
+                    width: 250,
+                    title: "公司地址"
+                }
+            );
+            
+            marker.addEventListener("click", function(){
+                this.openInfoWindow(infoWindow);
+            });
+            
+            // 初始打开信息窗口
+            marker.openInfoWindow(infoWindow);
+            
+            // 隐藏备用内容
+            document.getElementById('map-fallback').style.display = 'none';
+        } catch (error) {
+            console.error("百度地图初始化失败:", error);
+            // 显示备用内容
+            document.getElementById('map-fallback').style.display = 'block';
+        }
     }
     
     // 页面加载完毕后初始化地图
     window.onload = function() {
-        initMap();
+        // 检查是否有效的API密钥
+        if (document.querySelectorAll("script[src*='api.map.baidu.com']")[0].src.indexOf("ak=您的百度地图API密钥") > -1) {
+            // API密钥未设置，显示备用内容
+            document.getElementById('map-fallback').style.display = 'block';
+            console.warn("百度地图API密钥未设置。请访问 http://lbsyun.baidu.com/apiconsole/key 申请密钥");
+        } else {
+            // 尝试初始化地图
+            try {
+                initMap();
+            } catch (error) {
+                console.error("百度地图初始化失败:", error);
+                document.getElementById('map-fallback').style.display = 'block';
+            }
+        }
     };
 </script>
+
+<!-- 网站管理员注意: 请替换上面的"您的百度地图API密钥"为有效的密钥
+     获取密钥请访问: http://lbsyun.baidu.com/apiconsole/key
+     1. 注册/登录百度地图开放平台账号
+     2. 创建应用并设置为JavaScript API类型
+     3. 添加网站域名到白名单
+     4. 获取密钥并替换上面的占位符
+-->
 
 <!-- i18n脚本 -->
 <script src="js/i18n.js"></script>
@@ -438,44 +460,31 @@
 </script>
 
 <script>
-	// 表单提交处理
+	// Google Forms加载检测
 	$(document).ready(function() {
-		$("#contact-form").submit(function(e) {
-			e.preventDefault();
-			
-			// 简单表单验证
-			var name = $("#name").val();
-			var email = $("#email").val();
-			var subject = $("#subject").val();
-			var message = $("#message").val();
-			
-			if (name === "" || email === "" || subject === "" || message === "") {
-				$("#contactError").removeClass("hidden").html("<strong>发送失败!</strong> 请填写所有必填字段。");
-				return false;
-			}
-			
-			// 邮件验证
-			var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-			if (!emailPattern.test(email)) {
-				$("#contactError").removeClass("hidden").html("<strong>发送失败!</strong> 请输入有效的电子邮箱地址。");
-				return false;
-			}
-			
-			// 假设成功发送 - 实际环境中这里会调用后端API
-			$("#contactSuccess").removeClass("hidden");
-			$("#contactError").addClass("hidden");
-			
-			// 清空表单
-			$("#contact-form")[0].reset();
-			
-			// 构建邮件链接并打开
-			var mailtoLink = "mailto:postmaster@aginno.com.cn?subject=" + encodeURIComponent(subject) + 
-							"&body=" + encodeURIComponent("姓名: " + name + "\n电子邮箱: " + email + "\n\n" + message);
-			window.location.href = mailtoLink;
-			
-			return false;
+		// 检测iframe是否正确加载
+		$('.google-form-container iframe').on('load', function() {
+			console.log("Google表单已加载");
+		}).on('error', function() {
+			console.error("Google表单加载失败");
+			$('.google-form-container').html('<div class="alert alert-danger">表单加载失败，请刷新页面或直接发送邮件至 postmaster@aginno.com.cn</div>');
 		});
 	});
 </script>
+
+<!-- 
+站长注意: 要使用Google Forms收集信息，请按照以下步骤操作:
+
+1. 登录您的Google账号
+2. 访问 https://docs.google.com/forms/ 创建一个新表单
+3. 添加"姓名"、"邮箱"、"主题"、"留言内容"等字段
+4. 点击右上角"发送"按钮 > 选择"<>"嵌入选项卡
+5. 复制生成的iframe代码
+6. 将上方iframe的src属性替换为您表单的嵌入链接
+   (例如: https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/viewform?embedded=true)
+
+提交的表单数据将存储在关联的Google表格中，您可以随时查看。
+也可以设置在有新提交时通过邮件接收通知。
+-->
 </body>
 </html>
