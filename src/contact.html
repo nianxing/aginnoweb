@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>智农官网</title>
+<title data-i18n="site_title">智农科技 - 联系我们</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="" />
-<meta name="author" content="http://webthemez.com" />
+<meta name="description" content="智农科技的联系方式，欢迎咨询我们的各种农业智能化解决方案" />
+<meta name="author" content="智农" />
 <!-- css -->
 <link href="css/bootstrap.min.css" rel="stylesheet" />
 <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
 <link href="css/jcarousel.css" rel="stylesheet" />
 <link href="css/flexslider.css" rel="stylesheet" />
 <link href="css/style.css" rel="stylesheet" />
+<link href="css/font-awesome.css" rel="stylesheet" />
  
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -31,6 +32,136 @@
     border-radius: 4px;
     border: 1px solid #ddd;
     background-color: white;
+}
+
+/* 联系页面样式 */
+.contact-info {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.contact-info h4 {
+    color: #2E7D32;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.contact-info i {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    color: #4CAF50;
+}
+
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+.contact-form label {
+    font-weight: 600;
+    color: #444;
+}
+
+.contact-form .form-control {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: none;
+    margin-bottom: 20px;
+}
+
+.contact-form .form-control:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.2);
+}
+
+.contact-form .btn-submit {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.contact-form .btn-submit:hover {
+    background: #388E3C;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.map-container {
+    height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+#baiduMap {
+    height: 100%;
+    width: 100%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #4CAF50;
+}
+
+.contact-details .icon {
+    float: left;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    background: #f8f8f8;
+    border-radius: 50%;
+    line-height: 60px;
+    margin-right: 15px;
+}
+
+.contact-details .icon i {
+    font-size: 28px;
+    color: #4CAF50;
+}
+
+.contact-details .content {
+    overflow: hidden;
+}
+
+.contact-details .content h5 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contact-details .content p {
+    color: #666;
+    line-height: 1.6;
 }
 </style>
 </head>
@@ -74,64 +205,114 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-				<h2 class="pageTitle">Contact Us</h2>
+				<h2 class="pageTitle" data-i18n="contact_page_title">联系我们</h2>
 			</div>
 		</div>
 	</div>
 	</section>
-	<section id="content">
-	
+	<section id="content" class="section-padding">
 	<div class="container">
-	<div class="row"> 
-							<div class="col-md-12">
-								<div class="about-logo">
-									<h3>Get In Touch!</h3>
-									<p>Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas</p>
-                                    	<p>Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas</p>
-								</div> 
-							</div>
+		<div class="row"> 
+			<div class="col-md-12">
+				<div class="about-logo">
+					<h3 data-i18n="contact_heading">欢迎联系智农科技</h3>
+					<p data-i18n="contact_description">智农科技致力于为农业提供智能化解决方案，包括农业无人机培训、智能农机、智慧农场和智慧农服平台等业务。无论您是对我们的产品有兴趣，还是希望了解更多关于农业智能化的信息，或者想与我们建立合作关系，都欢迎随时联系我们。我们的专业团队将竭诚为您服务！</p>
+				</div> 
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-6">
+				<div class="contact-form">
+					<h3 data-i18n="contact_form_title">给我们留言</h3>
+					<p data-i18n="contact_form_desc">如有任何问题或建议，欢迎填写以下表单联系我们。您的消息将直接发送至我们的邮箱 postmaster@aginno.com.cn，我们将尽快回复您。</p>
+					<div class="alert alert-success hidden" id="contactSuccess">
+						<strong>发送成功!</strong> 您的消息已成功发送到我们的邮箱。
+					</div>
+					<div class="alert alert-danger hidden" id="contactError">
+						<strong>发送失败!</strong> 消息发送过程中出现错误，请稍后再试或直接发送邮件至 postmaster@aginno.com.cn。
+					</div>
+					<form id="contact-form" role="form" action="mailto:postmaster@aginno.com.cn" method="post" enctype="text/plain" novalidate="novalidate">
+						<div class="form-group has-feedback">
+							<label for="name" data-i18n="contact_form_name">姓名*</label>
+							<input type="text" class="form-control" id="name" name="name" placeholder="">
+							<i class="fa fa-user form-control-feedback"></i>
 						</div>
-	<div class="row">
-								<div class="col-md-6">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do tempor.</p>
-									<div class="alert alert-success hidden" id="contactSuccess">
-										<strong>Success!</strong> Your message has been sent to us.
-									</div>
-									<div class="alert alert-error hidden" id="contactError">
-										<strong>Error!</strong> There was an error sending your message.
-									</div>
-									<div class="contact-form">
-										<form id="contact-form" role="form" novalidate="novalidate">
-											<div class="form-group has-feedback">
-												<label for="name">Name*</label>
-												<input type="text" class="form-control" id="name" name="name" placeholder="">
-												<i class="fa fa-user form-control-feedback"></i>
-											</div>
-											<div class="form-group has-feedback">
-												<label for="email">Email*</label>
-												<input type="email" class="form-control" id="email" name="email" placeholder="">
-												<i class="fa fa-envelope form-control-feedback"></i>
-											</div>
-											<div class="form-group has-feedback">
-												<label for="subject">Subject*</label>
-												<input type="text" class="form-control" id="subject" name="subject" placeholder="">
-												<i class="fa fa-navicon form-control-feedback"></i>
-											</div>
-											<div class="form-group has-feedback">
-												<label for="message">Message*</label>
-												<textarea class="form-control" rows="6" id="message" name="message" placeholder=""></textarea>
-												<i class="fa fa-pencil form-control-feedback"></i>
-											</div>
-											<input type="submit" value="Submit" class="btn btn-default">
-										</form>
-									</div>
-								</div>
-								<div class="col-md-6">
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script><div style="overflow:hidden;height:500px;width:600px;"><div id="gmap_canvas" style="height:500px;width:600px;"></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style><a class="google-map-code" href="http://www.trivoo.net" id="get-map-data">trivoo</a></div><script type="text/javascript"> function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(40.805478,-73.96522499999998),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(40.805478, -73.96522499999998)});infowindow = new google.maps.InfoWindow({content:"<b>The Breslin</b><br/>2880 Broadway<br/> New York" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
-								</div>
-							</div>
+						<div class="form-group has-feedback">
+							<label for="email" data-i18n="contact_form_email">电子邮箱*</label>
+							<input type="email" class="form-control" id="email" name="email" placeholder="">
+							<i class="fa fa-envelope form-control-feedback"></i>
+						</div>
+						<div class="form-group has-feedback">
+							<label for="subject" data-i18n="contact_form_subject">主题*</label>
+							<input type="text" class="form-control" id="subject" name="subject" placeholder="">
+							<i class="fa fa-tag form-control-feedback"></i>
+						</div>
+						<div class="form-group has-feedback">
+							<label for="message" data-i18n="contact_form_message">留言内容*</label>
+							<textarea class="form-control" rows="6" id="message" name="message" placeholder=""></textarea>
+							<i class="fa fa-pencil form-control-feedback"></i>
+						</div>
+						<input type="submit" value="提交" data-i18n="contact_form_submit" class="btn btn-submit">
+					</form>
+				</div>
+			</div>
+			
+			<div class="col-md-6">
+				<div class="contact-info">
+					<h3 data-i18n="contact_info_title">联系方式</h3>
+					<div class="contact-details">
+						<div class="icon">
+							<i class="fa fa-map-marker"></i>
+						</div>
+						<div class="content">
+							<h5 data-i18n="contact_address_title">公司地址</h5>
+							<p data-i18n="contact_address">江苏省苏州市吴中区太湖国家旅游度假区香山街道孙武路2035号太湖科创中心320-29室</p>
+						</div>
+					</div>
+					
+					<div class="contact-details">
+						<div class="icon">
+							<i class="fa fa-envelope"></i>
+						</div>
+						<div class="content">
+							<h5 data-i18n="contact_email_title">电子邮箱</h5>
+							<p>postmaster@aginno.com.cn</p>
+						</div>
+					</div>
+					
+					<div class="contact-details">
+						<div class="icon">
+							<i class="fa fa-clock-o"></i>
+						</div>
+						<div class="content">
+							<h5 data-i18n="contact_hours_title">工作时间</h5>
+							<p data-i18n="contact_hours">周一至周五: 9:00 - 18:00<br>周末: 休息</p>
+						</div>
+					</div>
+					
+					<div class="contact-details">
+						<div class="icon">
+							<i class="fa fa-share-alt"></i>
+						</div>
+						<div class="content">
+							<h5 data-i18n="contact_social_title">社交媒体</h5>
+							<ul class="social-network" style="padding-left: 0;">
+								<li style="display: inline-block; margin-right: 10px;"><a href="#" title="微信"><i class="fa fa-weixin fa-lg"></i></a></li>
+								<li style="display: inline-block; margin-right: 10px;"><a href="#" title="微博"><i class="fa fa-weibo fa-lg"></i></a></li>
+								<li style="display: inline-block; margin-right: 10px;"><a href="https://www.linkedin.com/company/86170881" title="领英"><i class="fa fa-linkedin fa-lg"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<!-- 百度地图容器 -->
+				<div class="map-container">
+					<div id="baiduMap"></div>
+				</div>
+			</div>
+		</div>
 	</div>
- 
 	</section>
 	<!-- Footer -->
 	<footer>
@@ -202,6 +383,44 @@
 <script src="js/custom.js"></script>
 <script src="js/validate.js"></script>
 
+<!-- 百度地图API -->
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=您的百度地图API密钥"></script>
+<script type="text/javascript">
+    // 百度地图API功能
+    function initMap() {
+        var map = new BMap.Map("baiduMap");
+        var point = new BMap.Point(120.641042, 31.282461); // 太湖科创中心的经纬度坐标
+        map.centerAndZoom(point, 17);
+        map.enableScrollWheelZoom();   // 启用滚轮放大缩小
+        
+        var marker = new BMap.Marker(point);  // 创建标注
+        map.addOverlay(marker);               // 将标注添加到地图中
+        
+        // 添加信息窗口
+        var infoWindow = new BMap.InfoWindow(
+            "<div style='padding:10px;'>" +
+            "<h4 style='margin-top:0;'>苏州智农未来科技有限公司</h4>" +
+            "<p style='margin-bottom:0;'>太湖国家旅游度假区香山街道孙武路2035号太湖科创中心320-29室</p>" +
+            "</div>", {
+                width: 250,
+                title: "公司地址"
+            }
+        );
+        
+        marker.addEventListener("click", function(){
+            this.openInfoWindow(infoWindow);
+        });
+        
+        // 初始打开信息窗口
+        marker.openInfoWindow(infoWindow);
+    }
+    
+    // 页面加载完毕后初始化地图
+    window.onload = function() {
+        initMap();
+    };
+</script>
+
 <!-- i18n脚本 -->
 <script src="js/i18n.js"></script>
 <script>
@@ -216,6 +435,47 @@
             console.error("i18n failed to initialize in contact.html");
         }
     });
+</script>
+
+<script>
+	// 表单提交处理
+	$(document).ready(function() {
+		$("#contact-form").submit(function(e) {
+			e.preventDefault();
+			
+			// 简单表单验证
+			var name = $("#name").val();
+			var email = $("#email").val();
+			var subject = $("#subject").val();
+			var message = $("#message").val();
+			
+			if (name === "" || email === "" || subject === "" || message === "") {
+				$("#contactError").removeClass("hidden").html("<strong>发送失败!</strong> 请填写所有必填字段。");
+				return false;
+			}
+			
+			// 邮件验证
+			var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+			if (!emailPattern.test(email)) {
+				$("#contactError").removeClass("hidden").html("<strong>发送失败!</strong> 请输入有效的电子邮箱地址。");
+				return false;
+			}
+			
+			// 假设成功发送 - 实际环境中这里会调用后端API
+			$("#contactSuccess").removeClass("hidden");
+			$("#contactError").addClass("hidden");
+			
+			// 清空表单
+			$("#contact-form")[0].reset();
+			
+			// 构建邮件链接并打开
+			var mailtoLink = "mailto:postmaster@aginno.com.cn?subject=" + encodeURIComponent(subject) + 
+							"&body=" + encodeURIComponent("姓名: " + name + "\n电子邮箱: " + email + "\n\n" + message);
+			window.location.href = mailtoLink;
+			
+			return false;
+		});
+	});
 </script>
 </body>
 </html>
