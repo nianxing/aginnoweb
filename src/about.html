@@ -32,6 +32,280 @@
     border: 1px solid #ddd;
     background-color: white;
 }
+
+/* 发展历程时间线样式 */
+.history-timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px 0;
+}
+
+.history-timeline::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background: linear-gradient(to bottom, #4CAF50, #8BC34A);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+}
+
+.milestone {
+    position: relative;
+    width: 50%;
+    padding: 30px 40px;
+    box-sizing: border-box;
+    clear: both;
+}
+
+.milestone:nth-child(odd) {
+    float: left;
+    clear: right;
+    text-align: right;
+    transform: translateX(-30px);
+}
+
+.milestone:nth-child(even) {
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+}
+
+.milestone::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background: #fff;
+    border: 4px solid #4CAF50;
+    top: 40px;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.5);
+}
+
+.milestone:nth-child(even)::before {
+    left: -17px;
+}
+
+.milestone-content {
+    padding: 25px 30px;
+    background: white;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.milestone-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.milestone:nth-child(odd) .milestone-content {
+    border-right: 5px solid #4CAF50;
+}
+
+.milestone:nth-child(even) .milestone-content {
+    border-left: 5px solid #4CAF50;
+}
+
+.milestone-year {
+    position: absolute;
+    width: 70px;
+    height: 35px;
+    line-height: 35px;
+    right: -95px;
+    top: 35px;
+    background: #4CAF50;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+}
+
+.milestone:nth-child(even) .milestone-year {
+    left: -95px;
+}
+
+.milestone-content h4 {
+    margin: 0 0 10px 0;
+    color: #4CAF50;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.milestone-content p {
+    margin: 0;
+    color: #666;
+    line-height: 1.6;
+}
+
+.milestone-icon {
+    position: absolute;
+    color: #4CAF50;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    border: 2px solid #4CAF50;
+}
+
+.milestone:nth-child(odd) .milestone-icon {
+    right: -20px;
+    top: 30px;
+}
+
+.milestone:nth-child(even) .milestone-icon {
+    left: -20px;
+    top: 30px;
+}
+
+/* 添加动画效果 */
+.milestone {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease;
+}
+
+.milestone.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.milestone:nth-child(odd).appear {
+    transform: translateX(-30px);
+}
+
+.milestone:nth-child(even).appear {
+    transform: translateX(30px);
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 767px) {
+    .history-timeline::before {
+        left: 40px;
+    }
+
+    .milestone {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+        transform: none !important;
+    }
+
+    .milestone:nth-child(odd) {
+        text-align: left;
+    }
+
+    .milestone::before {
+        left: 28px !important;
+        top: 40px;
+    }
+
+    .milestone-year {
+        left: 75px !important;
+        right: auto !important;
+    }
+
+    .milestone:nth-child(odd) .milestone-content,
+    .milestone:nth-child(even) .milestone-content {
+        border-right: none;
+        border-left: 5px solid #4CAF50;
+    }
+
+    .milestone:nth-child(odd) .milestone-icon,
+    .milestone:nth-child(even) .milestone-icon {
+        left: 10px;
+        right: auto;
+    }
+}
+
+/* 战略合作伙伴样式 */
+.partners-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -15px;
+}
+
+.partner-item {
+    padding: 20px;
+    margin: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(16.666% - 30px);
+    min-width: 160px;
+}
+
+.partner-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.partner-logo {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.partner-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.partner-name {
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* 响应式调整 */
+@media (max-width: 1200px) {
+    .partner-item {
+        width: calc(20% - 30px);
+    }
+}
+
+@media (max-width: 992px) {
+    .partner-item {
+        width: calc(25% - 30px);
+    }
+}
+
+@media (max-width: 768px) {
+    .partner-item {
+        width: calc(33.333% - 30px);
+    }
+}
+
+@media (max-width: 576px) {
+    .partner-item {
+        width: calc(50% - 30px);
+    }
+}
 </style>
 </head>
 <body>
@@ -265,49 +539,79 @@
 						</div>
 						<br>
 						
-						<div class="timeline">
-							<div class="row">
-								<div class="col-md-12">
-									<div class="timeline-container">
-										<div class="timeline-item">
-											<div class="timeline-year">2021</div>
-											<div class="timeline-content">
-												<h4>企业合作</h4>
-												<p>与农机头部企业合作，研发出首款L3+智能农机系统</p>
-											</div>
-										</div>
-										<div class="timeline-item">
-											<div class="timeline-year">2022</div>
-											<div class="timeline-content">
-												<h4>技术突破</h4>
-												<p>研发出首款深度融合农艺的纯无人驾驶农机</p>
-											</div>
-										</div>
-										<div class="timeline-item">
-											<div class="timeline-year">2023</div>
-											<div class="timeline-content">
-												<h4>产品落地</h4>
-												<p>智农智能农机产品在山东完成数千亩无人化作业</p>
-											</div>
-										</div>
-										<div class="timeline-item">
-											<div class="timeline-year">2024</div>
-											<div class="timeline-content">
-												<h4>多模态AI决策系统</h4>
-												<p>在山东齐河落地基于多模态AI决策系统的智慧农场系统，实现病虫害防治、化肥施用、作物生长监测等作业</p>
-											</div>
-										</div>
-										<div class="timeline-item">
-											<div class="timeline-year">2025</div>
-											<div class="timeline-content">
-												<h4>全面升级</h4>
-												<p>新能源农机+AI决策系统+数字农服SaaS平台，推出智慧农业一体化解决方案</p>
-											</div>
-										</div>
-									</div>
+						<div class="history-timeline">
+							<div class="milestone">
+								<div class="milestone-content">
+									<h4>企业合作</h4>
+									<p>与农机头部企业合作，研发出首款L3+智能农机系统，实现了智能辅助作业功能。</p>
+									<div class="milestone-icon"><i class="fa fa-handshake-o"></i></div>
 								</div>
+								<div class="milestone-year">2021</div>
 							</div>
+							
+							<div class="milestone">
+								<div class="milestone-content">
+									<h4>技术突破</h4>
+									<p>研发出首款深度融合农艺的纯无人驾驶农机，解决了传统农机在复杂农田环境中的智能化难题。</p>
+									<div class="milestone-icon"><i class="fa fa-lightbulb-o"></i></div>
+								</div>
+								<div class="milestone-year">2022</div>
+							</div>
+							
+							<div class="milestone">
+								<div class="milestone-content">
+									<h4>产品落地</h4>
+									<p>智农智能农机产品在山东完成数千亩无人化作业，实现了耕、种、管、收全流程的智能化。</p>
+									<div class="milestone-icon"><i class="fa fa-check-circle"></i></div>
+								</div>
+								<div class="milestone-year">2023</div>
+							</div>
+							
+							<div class="milestone">
+								<div class="milestone-content">
+									<h4>多模态AI决策系统</h4>
+									<p>在山东齐河落地基于多模态AI决策系统的智慧农场系统，实现病虫害防治、化肥施用、作物生长监测等作业。</p>
+									<div class="milestone-icon"><i class="fa fa-cogs"></i></div>
+								</div>
+								<div class="milestone-year">2024</div>
+							</div>
+							
+							<div class="milestone">
+								<div class="milestone-content">
+									<h4>全面升级</h4>
+									<p>新能源农机+AI决策系统+数字农服SaaS平台，推出智慧农业一体化解决方案，打造"智慧农场"生态系统。</p>
+									<div class="milestone-icon"><i class="fa fa-rocket"></i></div>
+								</div>
+								<div class="milestone-year">2025</div>
+							</div>
+                            
+                            <div style="clear: both;"></div>
 						</div>
+
+                        <!-- 发展历程动画脚本 -->
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                // 监听滚动事件，显示时间线动画
+                                function checkTimelineView() {
+                                    const milestones = document.querySelectorAll('.milestone');
+                                    
+                                    milestones.forEach(milestone => {
+                                        const position = milestone.getBoundingClientRect();
+                                        
+                                        // 当元素进入视图时，添加appear类以触发动画
+                                        if(position.top < window.innerHeight - 100) {
+                                            milestone.classList.add('appear');
+                                        }
+                                    });
+                                }
+                                
+                                // 页面加载时检查
+                                checkTimelineView();
+                                
+                                // 页面滚动时检查
+                                window.addEventListener('scroll', checkTimelineView);
+                            });
+                        </script>
 
 						<!-- Strategic Partnerships -->
 						<div class="block-heading-six">
@@ -316,66 +620,60 @@
 						<br>
 						
 						<div class="partners">
-							<div class="row">
-								<div class="col-md-12">
-									<div class="partners-carousel">
-										<div class="row">
-											<div class="col-md-2 col-sm-4 col-xs-6">
-												<div class="partner-item">
-													<img src="img/partners/partner1.png" alt="中国农业大学" class="img-responsive">
-													<p>中国农业大学</p>
-												</div>
-											</div>
-											<div class="col-md-2 col-sm-4 col-xs-6">
-												<div class="partner-item">
-													<img src="img/partners/partner2.jpg" alt="国机集团" class="img-responsive">
-													<p>国机集团</p>
-												</div>
-											</div>
-											<div class="col-md-2 col-sm-4 col-xs-6">
-												<div class="partner-item">
-													<img src="img/partners/partner3.png" alt="北大荒" class="img-responsive">
-													<p>北大荒集团</p>
-												</div>
-											</div>
-											<div class="col-md-2 col-sm-4 col-xs-6">
-												<div class="partner-item">
-													<img src="img/partners/partner4.png" alt="潍柴雷沃" class="img-responsive">
-													<p>潍柴雷沃</p>
-												</div>
-											</div>
-											<div class="col-md-2 col-sm-4 col-xs-6">
-												<div class="partner-item">
-													<img src="img/partners/partner5.png" alt="山东省农业机械科学研究院" class="img-responsive">
-													<p>山东省农业机械科学研究院</p>
-												</div>
-											</div>
-											<div class="col-md-2 col-sm-4 col-xs-6">
-												<div class="partner-item">
-													<img src="img/partners/partner6.png" alt="天鹅股份" class="img-responsive">
-													<p>天鹅股份</p>
-												</div>
-											</div>
-											<div class="col-md-2 col-sm-4 col-xs-6">
-												<div class="partner-item">
-													<img src="img/partners/partner7.png" alt="大疆创新" class="img-responsive">
-													<p>大疆创新</p>
-												</div>
-											</div>
-											<div class="col-md-2 col-sm-4 col-xs-6">
-												<div class="partner-item">
-													<img src="img/partners/partner8.jpg" alt="微软" class="img-responsive">
-													<p>微软</p>
-												</div>
-											</div>
-											<div class="col-md-2 col-sm-4 col-xs-6">
-												<div class="partner-item">
-													<img src="img/partners/partner9.png" alt="英伟达" class="img-responsive">
-													<p>英伟达</p>
-												</div>
-											</div>
-										</div>
+							<div class="partners-grid">
+								<div class="partner-item">
+									<div class="partner-logo">
+										<img src="img/partners/partner1.png" alt="中国农业大学">
 									</div>
+									<p class="partner-name">中国农业大学</p>
+								</div>
+								<div class="partner-item">
+									<div class="partner-logo">
+										<img src="img/partners/partner2.jpg" alt="国机集团">
+									</div>
+									<p class="partner-name">国机集团</p>
+								</div>
+								<div class="partner-item">
+									<div class="partner-logo">
+										<img src="img/partners/partner3.png" alt="北大荒集团">
+									</div>
+									<p class="partner-name">北大荒集团</p>
+								</div>
+								<div class="partner-item">
+									<div class="partner-logo">
+										<img src="img/partners/partner4.png" alt="潍柴雷沃">
+									</div>
+									<p class="partner-name">潍柴雷沃</p>
+								</div>
+								<div class="partner-item">
+									<div class="partner-logo">
+										<img src="img/partners/partner5.png" alt="山东省农业机械科学研究院">
+									</div>
+									<p class="partner-name">山东省农业机械科学研究院</p>
+								</div>
+								<div class="partner-item">
+									<div class="partner-logo">
+										<img src="img/partners/partner6.png" alt="天鹅股份">
+									</div>
+									<p class="partner-name">天鹅股份</p>
+								</div>
+								<div class="partner-item">
+									<div class="partner-logo">
+										<img src="img/partners/partner7.png" alt="大疆创新">
+									</div>
+									<p class="partner-name">大疆创新</p>
+								</div>
+								<div class="partner-item">
+									<div class="partner-logo">
+										<img src="img/partners/partner8.jpg" alt="微软">
+									</div>
+									<p class="partner-name">微软</p>
+								</div>
+								<div class="partner-item">
+									<div class="partner-logo">
+										<img src="img/partners/partner9.png" alt="英伟达">
+									</div>
+									<p class="partner-name">英伟达</p>
 								</div>
 							</div>
 						</div>
@@ -404,7 +702,7 @@
 										<ul class="cert-list">
 											<li>2024年德国海外商会联盟·大中华区全球创新大赛二等奖</li>
 											<li>第八届三创大赛全国总决赛三等奖</li>
-											<li>2024年“华罗庚杯”常州市创新创业大赛三等奖</li>
+											<li>2024年"华罗庚杯"常州市创新创业大赛三等奖</li>
 										</ul>
 									</div>
 								</div>
