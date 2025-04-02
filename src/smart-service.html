@@ -14,10 +14,9 @@
 <link href="css/style.css" rel="stylesheet" />
 
 <!-- 语言选择器样式 -->
-<!--
 <style>
 .language-selector-container {
-    position: absolute;
+    position: fixed;
     top: 10px;
     right: 20px;
     z-index: 1000;
@@ -28,8 +27,464 @@
     border: 1px solid #ddd;
     background-color: white;
 }
+
+/* 全局页面美化 */
+.section-title {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.section-title h3 {
+    display: inline-block;
+    position: relative;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+.section-title h3:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #4CAF50, transparent);
+}
+
+/* 平台架构样式优化 */
+.platform-architecture {
+    position: relative;
+    margin: 0 auto 40px;
+    max-width: 1000px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.platform-architecture img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.architecture-description {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 0 0 10px 10px;
+    border-top: 4px solid #4CAF50;
+}
+
+.architecture-description p {
+    margin: 0;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* 功能卡片优化 */
+.card {
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    background: white;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.card-image {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.card-content {
+    padding: 20px;
+    position: relative;
+}
+
+.card-content h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #333;
+    border-left: 4px solid #4CAF50;
+    padding-left: 10px;
+}
+
+.card-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* 应用场景卡片优化 */
+.scenario-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+    height: 100%;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.scenario-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.scenario-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.scenario-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.scenario-card:hover .scenario-image img {
+    transform: scale(1.1);
+}
+
+.scenario-details {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background: #f8f9fa;
+}
+
+.scenario-details h3 {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #2E7D32;
+}
+
+.scenario-details p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.feature-list {
+    margin: 0;
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+.feature-list li {
+    position: relative;
+    padding: 5px 0 5px 25px;
+    color: #555;
+}
+
+.feature-list li:before {
+    content: "\f00c";
+    font-family: 'FontAwesome';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    color: #4CAF50;
+}
+
+/* 服务优势模块优化 */
+.advantage-box {
+    text-align: center;
+    padding: 30px 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.advantage-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.advantage-box .icon {
+    margin-bottom: 20px;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    background: linear-gradient(145deg, #f0fff1, #e8f5e9);
+    color: #4CAF50;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.2);
+}
+
+.advantage-box h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.advantage-box p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Service Process Styles - 改进 */
+.service-process {
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    max-width: 900px;
+    position: relative;
+}
+
+.service-process:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, #43a047, #66bb6a, #81c784);
+    border-radius: 15px 15px 0 0;
+}
+
+.process-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.process-item {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    width: 100%;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.process-item:hover {
+    transform: translateY(-8px);
+}
+
+.process-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #4CAF50, #2E7D32);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.step-number {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.process-content {
+    background-color: white;
+    padding: 25px 30px;
+    border-radius: 10px;
+    flex-grow: 1;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-left: 6px solid #4CAF50;
+    position: relative;
+    z-index: 1;
+}
+
+.process-content h4 {
+    margin-top: 0;
+    color: #2E7D32;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.process-content p {
+    margin-bottom: 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+.process-connector {
+    width: 4px;
+    height: 40px;
+    background: linear-gradient(to bottom, #4CAF50, #81c784);
+    margin-left: 43px;
+    position: relative;
+}
+
+.process-connector:before, .process-connector:after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 4px;
+    background-color: #4CAF50;
+    left: -4px;
+}
+
+.process-connector:before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.process-connector:after {
+    top: 8px;
+    transform: rotate(-45deg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .process-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .process-circle {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .process-connector {
+        height: 50px;
+        width: 4px;
+        margin-left: 0;
+    }
+    
+    .process-connector:before, .process-connector:after {
+        left: 0;
+        width: 4px;
+        height: 12px;
+    }
+    
+    .process-connector:before {
+        top: 0;
+        left: -4px;
+        transform: rotate(45deg);
+    }
+    
+    .process-connector:after {
+        top: 0;
+        left: 4px;
+        transform: rotate(-45deg);
+    }
+    
+    .process-content {
+        width: 100%;
+        border-left: none;
+        border-top: 6px solid #4CAF50;
+    }
+}
+
+/* Add animation for the active state */
+.process-item.active .process-circle {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 20px rgba(76, 175, 80, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+    }
+}
+
+/* CTA Box 优化 */
+.cta-box {
+    background: linear-gradient(135deg, #43a047, #2E7D32);
+    color: white;
+    padding: 50px 30px;
+    border-radius: 15px;
+    text-align: center;
+    margin: 60px 0 20px;
+    box-shadow: 0 10px 30px rgba(76, 175, 80, 0.3);
+}
+
+.cta-box h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.cta-box p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.cta-box .btn-primary {
+    background: white;
+    color: #2E7D32;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.cta-box .btn-primary:hover {
+    background: #f5f5f5;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* 行高度调整 */
+.row.equal-height {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row.equal-height > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 内容间距调整 */
+#content {
+    padding: 60px 0;
+}
 </style>
--->
 </head>
 <body>
 <div id="wrapper">
@@ -119,7 +574,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row service-v1 margin-bottom-40">
+            <div class="row equal-height service-v1 margin-bottom-40">
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-image">
@@ -154,7 +609,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row service-v1 margin-bottom-40">
+            <div class="row equal-height service-v1 margin-bottom-40">
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-image">
@@ -198,7 +653,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row equal-height">
                 <div class="col-md-6">
                     <div class="scenario-card">
                         <div class="scenario-image">
@@ -271,47 +726,6 @@
                 </div>
             </div>
 
-            <!-- 成功案例 -->
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-title">
-                        <h3>成功案例</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="case-study">
-                        <img src="img/smart-service/case1.jpg" alt="江苏农服中心案例" class="img-responsive">
-                        <div class="case-content">
-                            <h3>江苏省农服中心数字化转型</h3>
-                            <p>为江苏省某县级农服中心提供智慧农服平台搭建和运营服务，覆盖全县2万户农户和100个农业合作社。项目成果：</p>
-                            <ul>
-                                <li>服务效率提升60%</li>
-                                <li>农资采购成本降低18%</li>
-                                <li>农机作业效率提高35%</li>
-                                <li>农户收入增加12%</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="case-study">
-                        <img src="img/smart-service/case2.jpg" alt="安徽合作社案例" class="img-responsive">
-                        <div class="case-content">
-                            <h3>安徽水稻产业联合体服务平台</h3>
-                            <p>为安徽某水稻产业联合体（包含50个合作社，覆盖10万亩水稻）搭建农服平台，实现产业链数字化管理。项目成果：</p>
-                            <ul>
-                                <li>统一标准生产面积达95%</li>
-                                <li>优质稻米比例提高40%</li>
-                                <li>产品溯源覆盖率100%</li>
-                                <li>产品均价提高25%</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <!-- 服务优势 -->
             <div class="row">
                 <div class="col-md-12">
@@ -320,7 +734,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row equal-height">
                 <div class="col-md-3">
                     <div class="advantage-box">
                         <div class="icon">
@@ -368,116 +782,58 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
-                    <div class="process-timeline">
-                        <div class="process-step">
-                            <div class="step-number">1</div>
-                            <div class="step-content">
-                                <h4>需求采集</h4>
-                                <p>了解客户的具体需求，包括生产规模、作物类型、服务期望等信息</p>
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="service-process">
+                        <div class="process-wrapper">
+                            <div class="process-item active">
+                                <div class="process-circle">
+                                    <span class="step-number">1</span>
+                                </div>
+                                <div class="process-content">
+                                    <h4>需求采集</h4>
+                                    <p>了解客户的具体需求，包括生产规模、作物类型、服务期望等信息</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">2</div>
-                            <div class="step-content">
-                                <h4>方案制定</h4>
-                                <p>根据需求定制个性化服务方案，明确服务内容、标准、时间和价格</p>
+                            <div class="process-connector"></div>
+                            <div class="process-item">
+                                <div class="process-circle">
+                                    <span class="step-number">2</span>
+                                </div>
+                                <div class="process-content">
+                                    <h4>方案制定</h4>
+                                    <p>根据需求定制个性化服务方案，明确服务内容、标准、时间和价格</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">3</div>
-                            <div class="step-content">
-                                <h4>服务实施</h4>
-                                <p>按照方案安排专业团队提供服务，确保服务质量和进度</p>
+                            <div class="process-connector"></div>
+                            <div class="process-item">
+                                <div class="process-circle">
+                                    <span class="step-number">3</span>
+                                </div>
+                                <div class="process-content">
+                                    <h4>服务实施</h4>
+                                    <p>按照方案安排专业团队提供服务，确保服务质量和进度</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">4</div>
-                            <div class="step-content">
-                                <h4>效果评估</h4>
-                                <p>对服务成效进行评估，收集客户反馈，不断优化服务流程和内容</p>
+                            <div class="process-connector"></div>
+                            <div class="process-item">
+                                <div class="process-circle">
+                                    <span class="step-number">4</span>
+                                </div>
+                                <div class="process-content">
+                                    <h4>效果评估</h4>
+                                    <p>对服务成效进行评估，收集客户反馈，不断优化服务流程和内容</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">5</div>
-                            <div class="step-content">
-                                <h4>持续服务</h4>
-                                <p>建立长期服务关系，提供持续的技术支持和增值服务</p>
+                            <div class="process-connector"></div>
+                            <div class="process-item">
+                                <div class="process-circle">
+                                    <span class="step-number">5</span>
+                                </div>
+                                <div class="process-content">
+                                    <h4>持续服务</h4>
+                                    <p>建立长期服务关系，提供持续的技术支持和增值服务</p>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 定价模式 -->
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-title">
-                        <h3>服务套餐</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="pricing-box">
-                        <div class="pricing-title">
-                            <h4>基础版</h4>
-                            <span class="price">¥1,980<small>/年</small></span>
-                        </div>
-                        <div class="pricing-features">
-                            <ul>
-                                <li>基础农资采购服务</li>
-                                <li>基础农技咨询（5次/月）</li>
-                                <li>农机作业预约</li>
-                                <li>基础农业信息推送</li>
-                                <li>产品展示（3个产品）</li>
-                                <li class="disabled">专家在线问诊</li>
-                                <li class="disabled">个性化生产方案</li>
-                                <li class="disabled">金融服务接入</li>
-                            </ul>
-                            <a href="#" class="btn btn-primary">立即购买</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="pricing-box featured">
-                        <div class="pricing-title">
-                            <h4>专业版</h4>
-                            <span class="price">¥4,980<small>/年</small></span>
-                        </div>
-                        <div class="pricing-features">
-                            <ul>
-                                <li>优惠农资采购服务</li>
-                                <li>专业农技咨询（不限次数）</li>
-                                <li>农机作业优先预约</li>
-                                <li>定制化农业信息推送</li>
-                                <li>产品展示（10个产品）</li>
-                                <li>专家在线问诊（12次/年）</li>
-                                <li>个性化生产方案</li>
-                                <li class="disabled">金融服务接入</li>
-                            </ul>
-                            <a href="#" class="btn btn-primary">立即购买</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="pricing-box">
-                        <div class="pricing-title">
-                            <h4>企业版</h4>
-                            <span class="price">¥9,980<small>/年</small></span>
-                        </div>
-                        <div class="pricing-features">
-                            <ul>
-                                <li>定制化农资采购方案</li>
-                                <li>专家团队技术支持</li>
-                                <li>农机作业定制化服务</li>
-                                <li>农业大数据分析</li>
-                                <li>产品展示（不限数量）</li>
-                                <li>专家现场指导（6次/年）</li>
-                                <li>全程生产托管方案</li>
-                                <li>优惠金融服务接入</li>
-                            </ul>
-                            <a href="#" class="btn btn-primary">立即购买</a>
                         </div>
                     </div>
                 </div>
@@ -485,7 +841,7 @@
 
             <!-- CTA -->
             <div class="row">
-                <div class="col-md-12 text-center">
+                <div class="col-md-10 col-md-offset-1 text-center">
                     <div class="cta-box">
                         <h3>让农业变得更简单</h3>
                         <p>立即体验智慧农服平台，享受一站式农业生产服务</p>

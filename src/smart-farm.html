@@ -27,6 +27,133 @@
     border: 1px solid #ddd;
     background-color: white;
 }
+
+/* Service Process Styles */
+.service-process {
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    max-width: 800px;
+}
+
+.process-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.process-item {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.process-item:hover {
+    transform: translateY(-5px);
+}
+
+.process-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #4CAF50, #2E7D32);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px;
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+    flex-shrink: 0;
+}
+
+.step-number {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.process-content {
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 8px;
+    flex-grow: 1;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-left: 5px solid #4CAF50;
+}
+
+.process-content h4 {
+    margin-top: 0;
+    color: #2E7D32;
+    font-weight: 600;
+}
+
+.process-content p {
+    margin-bottom: 0;
+    color: #555;
+}
+
+.process-connector {
+    width: 3px;
+    height: 30px;
+    background-color: #4CAF50;
+    margin-left: 40px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .process-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .process-circle {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .process-connector {
+        height: 40px;
+        width: 3px;
+        margin-left: 0;
+    }
+    
+    .process-content {
+        width: 100%;
+        border-left: none;
+        border-top: 5px solid #4CAF50;
+    }
+}
+
+/* Add animation for the active state */
+.process-item.active .process-circle {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(76, 175, 80, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+    }
+}
+
+/* Section spacing */
+.section-title {
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+/* Solution and case study styles */
+.solution-card, .case-study {
+    margin-bottom: 30px;
+}
 </style>
 </head>
 <body>
@@ -263,6 +390,7 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
                 <div class="col-md-6">
                     <div class="case-study">
                         <img src="img/smart-farm/case1.png" alt="山东齐河智慧农场案例" class="img-responsive">
@@ -277,11 +405,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-6">
+                    <!-- 可以在这里添加第二个案例 -->
+                </div>
             </div>
 
             <!-- 服务流程 -->
             <div class="row">
-                <div class="col-md-10 col-md-offset-1">
+                <div class="col-md-12">
                     <div class="section-title">
                         <h3>服务流程</h3>
                     </div>
@@ -344,123 +475,6 @@
                     </div>
                 </div>
             </div>
-
-            <style>
-                .service-process {
-                    margin: 50px auto;
-                    padding: 20px;
-                    background-color: #f9f9f9;
-                    border-radius: 10px;
-                    box-shadow: 0 0 20px rgba(0,0,0,0.05);
-                    max-width: 800px;
-                }
-                
-                .process-wrapper {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                }
-                
-                .process-item {
-                    display: flex;
-                    align-items: center;
-                    margin: 15px 0;
-                    width: 100%;
-                    transition: all 0.3s ease;
-                }
-                
-                .process-item:hover {
-                    transform: translateY(-5px);
-                }
-                
-                .process-circle {
-                    width: 80px;
-                    height: 80px;
-                    border-radius: 50%;
-                    background: linear-gradient(145deg, #4CAF50, #2E7D32);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    margin-right: 25px;
-                    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
-                    flex-shrink: 0;
-                }
-                
-                .step-number {
-                    color: white;
-                    font-size: 28px;
-                    font-weight: bold;
-                }
-                
-                .process-content {
-                    background-color: white;
-                    padding: 20px 30px;
-                    border-radius: 8px;
-                    flex-grow: 1;
-                    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-                    border-left: 5px solid #4CAF50;
-                }
-                
-                .process-content h4 {
-                    margin-top: 0;
-                    color: #2E7D32;
-                    font-weight: 600;
-                }
-                
-                .process-content p {
-                    margin-bottom: 0;
-                    color: #555;
-                }
-                
-                .process-connector {
-                    width: 3px;
-                    height: 30px;
-                    background-color: #4CAF50;
-                    margin-left: 40px;
-                }
-                
-                /* Responsive adjustments */
-                @media (max-width: 768px) {
-                    .process-item {
-                        flex-direction: column;
-                        text-align: center;
-                    }
-                    
-                    .process-circle {
-                        margin-right: 0;
-                        margin-bottom: 15px;
-                    }
-                    
-                    .process-connector {
-                        height: 40px;
-                        width: 3px;
-                        margin-left: 0;
-                    }
-                    
-                    .process-content {
-                        width: 100%;
-                        border-left: none;
-                        border-top: 5px solid #4CAF50;
-                    }
-                }
-                
-                /* Add animation for the active state */
-                .process-item.active .process-circle {
-                    animation: pulse 2s infinite;
-                }
-                
-                @keyframes pulse {
-                    0% {
-                        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
-                    }
-                    70% {
-                        box-shadow: 0 0 0 15px rgba(76, 175, 80, 0);
-                    }
-                    100% {
-                        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
-                    }
-                }
-            </style>
 
             <!-- CTA -->
             <div class="row">
